@@ -1,0 +1,237 @@
+.obj
+	position: relative
+	&__wrapper
+		margin: 4rem 0
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		&.description
+			align-items: stretch
+		&-gallery
+			display: flex
+			align-items: flex-start
+			&-nav
+				height: 38.875rem
+				overflow: hidden
+				margin-right: 1.25rem
+				&-ph
+					cursor: pointer
+					width: 6.75rem
+					height: 6.75rem
+					&:not(:last-child)
+						margin-bottom: 1.25rem
+					& img
+						width: 100%
+						height: 100%
+						object-fit: cover
+			&-main
+				cursor: pointer
+				overflow: hidden
+				width: 38.875rem
+				height: 38.875rem
+				@media only screen and (min-width : 390px)
+					&:hover img
+						transform: scale(2.5)
+				& img
+						width: 100%
+						height: 100%
+						object-fit: cover
+						transition: transform .3s
+		&-info
+			width: 100%
+			margin: 0 8rem 0 9.25rem
+			&.contact
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+			&-type, &-title, &-specifications-type, &-specifications-name
+				@include font(0.875rem, 400, 'SourceCodePro')
+			&-type
+				margin-bottom: 1.5rem
+			&-name
+				@include font(1.75rem, 600, 'CormorantGaramond')
+				min-height: 15.125rem
+				margin-bottom: 1.5rem
+			&-specifications
+				padding: 1rem 0 1.5rem 0
+				display: grid
+				grid-template-columns: auto 1fr
+				gap: 0.25rem 1.8rem
+				&-type
+					color: $grey
+			&-delivery
+				@include font(1rem, 400, 'SourceSansPro')
+				padding: 1.5rem 0
+				border-top: 0.0625rem $dark-grey solid
+				border-bottom: 0.0625rem $dark-grey solid
+			&-price
+				margin: 2.2rem 0 0.58rem 0
+				display: flex
+				align-items: center
+				justify-content: space-between
+				&-price, &-btn
+					@include font(1rem, 400, 'SourceSansPro')
+				&-btn
+					cursor: pointer
+					display: flex
+					align-items: center
+					justify-content: center
+					min-width: 10.625rem
+					padding: 0.5rem 1.5rem 0.62rem 1.5rem
+					background-color: $gold
+			&-contact-title
+				@include font(1.25rem, 500, 'CormorantGaramond')
+				margin-bottom: 1rem
+			&-request
+				display: flex
+				align-items: center
+				justify-content: space-between
+				margin-bottom: 0.3rem
+				&-text
+					@include font(1rem, 300, 'SourceSansPro')
+					color: $grey
+					line-height: 1.5rem
+				&-btn
+					cursor: pointer
+					@include font(1rem, 400, 'SourceSansPro')
+					display: flex
+					align-items: center
+					justify-content: center
+					min-width: 14.8125rem
+					border: 0.0625rem $text-color solid
+					padding: 0.5rem 1.5rem 0.62rem 1.5rem
+		&-description
+			display: flex
+			align-items: flex-start
+			&-logo
+				width: 6.75rem
+				margin-right: 1.25rem
+				& img
+					width: 1rem
+					height: 1rem
+					margin-top: 0.3rem
+			&-text
+				display: flex
+				flex-direction: column
+				justify-content: space-between
+				width: 39rem
+				height: 100%
+				border-bottom: 0.0625rem $dark-grey solid
+				&-title
+					@include font(1.25rem, 500, 'CormorantGaramond')
+					margin-bottom: 1rem
+				&-text
+					@include font(1rem, 300, 'SourceSansPro')
+					line-height: 1.5rem
+					color: $grey
+					overflow: hidden
+					height: 18rem
+					margin-bottom: 1rem
+					&.active
+						height: auto
+				&-btn
+					cursor: pointer
+					display: flex
+					align-items: center
+					justify-content: flex-end
+					margin-bottom: 0.5rem
+					&-text
+						@include font(1rem, 300, 'SourceSansPro')
+						color: $grey
+						margin-right: 0.62rem
+	&__related
+		position: relative
+		&-title
+			@include font(1.75rem, 600, 'CormorantGaramond')
+			padding: 1.5rem 0 2rem 0
+		&-items
+			overflow: visible
+			display: flex
+			align-items: flex-start
+			transition: transform .5s
+			&::-webkit-scrollbar
+				width: 0
+				height: 0
+			& .catalog__cards-card
+				margin: 1rem 2.3rem 1rem 1rem
+				min-width: 16.125rem
+				&-img
+					height: 16.125rem
+		&-nav
+			display: flex
+			align-items: center
+			justify-content: flex-end
+			padding: 1.5rem 0
+			& .arrow.rotate
+				margin-left: 1.5rem
+
+.order
+	position: fixed
+	inset: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	background-color: rgba(0, 0, 0, 0.7)
+	display: none
+	&.active
+		display: flex
+	&__popup
+		width: 39.375rem
+		height: auto
+		padding: 1rem 3.125rem 4rem 3.125rem
+		color: $backround
+		background-color: $text-color
+		& .filter__btns
+			margin-top: 1.56rem
+		&-item
+			margin: 1.56rem 0
+			padding: 1rem
+			display: flex
+			align-items: flex-start
+			background: rgba(0, 0, 0, 0.05)
+			&-ph
+				width: 4.6rem
+				height: 4.6rem
+				margin-right: 1rem
+				& img
+					width: 100%
+					height: 100%
+					object-fit: cover
+			&-info
+				position: relative
+				&-type
+					@include font(0.874rem, 400, 'SourceCodePro')
+				&-name
+					@include font(1.75rem, 600, 'CormorantGaramond')
+		&-text
+			@include font(1.25rem, 500, 'CormorantGaramond')
+
+.filter.request__popup .filter__popup
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	margin-left: auto
+	
+.request__popup
+	display: none
+	margin: 0
+	&.active
+		display: block
+	& .obj__wrapper-info.contact
+		margin: 0
+	textarea
+		margin-bottom: 0
+	&-title
+		@include font(1.25rem, 500, 'CormorantGaramond')
+		margin: 1rem 0
+	&-text
+		@include font(0.75rem, 300, 'SourceSansPro')
+	&-btn
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		padding: 0.5rem 1.5rem 0.62rem 1.5rem
+		color: $text-color
+		background-color: $backround
+		margin: 1rem 0

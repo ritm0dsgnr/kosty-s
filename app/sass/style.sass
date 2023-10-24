@@ -1,0 +1,62 @@
+@import "assets"
+
+*::-webkit-scrollbar 
+	width: 0.8rem
+
+*::-webkit-scrollbar-track
+	background: $backround-light
+
+*::-webkit-scrollbar-thumb
+	background-color: $gold
+
+html,body
+	font-size: calc(100vw / 1920 * 16)
+	height: 100%
+	@media only screen and (max-width : 1300px)
+		font-size: calc(100vw / 1300 * 16)
+	@media only screen and (max-width : 1024px)
+		font-size: calc(100vw / 1024 * 16)
+	@media only screen and (max-width : 390px)
+		font-size: calc(100vw / 390 * 16)
+
+body
+	font-family: $main-font
+	font-weight: 500
+	background-color: $backround
+	color: $text-color
+	overflow-x: hidden
+	&.lock
+		overflow: hidden
+		& .page
+			padding-right: 0.8rem
+
+.page
+	overflow: hidden
+	min-height: 100vh
+
+.container, .container-obj
+	width: 95rem
+	margin: 0 auto
+
+.arrow
+	cursor: pointer
+	stroke: $text-color
+	stroke-width: 1px
+	width: 1.5rem
+	height: 1.5rem
+	&.rotate
+		transform: rotate(180deg)
+	&.down
+		transform: rotate(-90deg)
+	&.up
+		transform: rotate(90deg)
+
+@import "header"
+@import "breadcrumb"
+
+@import "main"	
+@import "catalog"
+@import "object"
+
+@import "footer"
+@import "media"
