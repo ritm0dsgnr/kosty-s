@@ -1,5 +1,5 @@
 .footer
-	margin-top: 6.25rem
+	margin-top: 100px
 
 .pre__footer
 	background-color: $backround-light
@@ -43,10 +43,10 @@
 			margin-bottom: 1.25rem
 
 .contact__footer
-	padding: 4rem 0
+	padding: 64px 0
 	display: grid
 	grid-template-columns: repeat(2, 1fr)
-	gap: 0 1.25rem
+	gap: 0 20px
 	&-item
 		position: relative
 		&-title
@@ -55,14 +55,14 @@
 		&-header
 			display: flex
 			align-items: center
-			padding-bottom: 1rem
-			border-bottom: 0.0625rem $dark-grey solid
+			padding-bottom: 16px
+			border-bottom: 1px $dark-grey solid
 			&-avatar
 				overflow: hidden
-				width: 3.5rem
-				height: 3.5rem
+				width: 56px
+				height: 56px
 				border-radius: 50%
-				margin-right: 1rem
+				margin-right: 16px
 				& img
 					width: 100%
 					height: 100%
@@ -74,71 +74,73 @@
 					color: $grey
 				&-post
 					@include font(16px, 300, 'SourceSansPro')
-					line-height: 1.5rem
+					line-height: 24px
 					color: $grey
 		&-contact
 			display: flex
 			flex-direction: column
 			&-text
 				@include font(16px, 300, 'SourceSansPro')
-				line-height: 1.5rem
+				line-height: 24px
 				color: $grey
-				padding: 1rem 0
+				padding: 16px 0
 			&-link
 				@include font(16px, 400, 'SourceSansPro')
 				color: $grey
 				display: inline-block
 				&:not(:last-child)
-					margin-bottom: 0.25rem
+					margin-bottom: 4px
 
 .main__footer
-	padding: 4rem 0 2rem 0
+	padding: 64px 0 32px 0
 	display: grid
 	grid-template-columns: repeat(2, 1fr)
-	gap: 0 1.25rem
+	gap: 0 20px
 	&-item
 		display: flex
 		flex-direction: column
 		&-logo
-			width: 8.9375rem
-			height: 4.3125rem
-			margin-bottom: 3rem
+			width: 143px
+			height: 69px
+			margin-bottom: 48px
 		&-link
 			@include font(10px, 400, 'SourceSansPro')
-			line-height: 1.5rem
+			line-height: 24px
 			color: $gold
 		&-text
 			@include font(10px, 400, 'SourceSansPro')
-			line-height: 1.5rem
+			line-height: 24px
 			color: $dark-grey
-			margin-top: 2.5rem
-			@media only screen and (max-width : 390px)
+			margin-top: 40px
+			@media only screen and (max-width : 730px)
 				&.desktop
 					display: none
-			@media only screen and (min-width : 390px)
+			@media only screen and (min-width : 730px)
 				&.mobile
 					display: none
 		&-wrapper
 			display: grid
 			grid-template-columns: repeat(3, 1fr)
+			gap: 70px
 			& div
+				max-width: 202px
 				display: flex
 				flex-direction: column
 			&-link
 				@include font(16px, 300, 'SourceSansPro')
-				line-height: 1.5rem
+				line-height: 24px
 				color: $text-color
 				&:not(:last-child)
-					margin-bottom: 0.25rem
+					margin-bottom: 4px
 				&.grey
 					color: $grey
 				&.custom
 					@include font(24px, 500, 'CormorantGaramond')
-					line-height: 2.25rem
+					line-height: 36px
 					color: $gold
 					text-decoration: underline
 					&:not(:last-child)
-						margin-bottom: 0.62rem
+						margin-bottom: 0
 
 .container-obj .main__footer
 	padding: 5.88rem 0 2rem 0

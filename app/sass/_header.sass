@@ -2,10 +2,10 @@
 	display: flex
 	align-items: center
 	justify-content: space-between
-	padding: 1.625rem 0rem 1.1rem 0rem
+	padding: 25px 0 19px 0
 	&-logo
-		width: 1.875rem
-		height: 1.875rem
+		width: 30px
+		height: 30px
 	&__wrapper
 		display: flex
 		align-items: center
@@ -13,8 +13,8 @@
 			display: flex
 			align-items: center
 			&-item
-				padding: 0.25rem
-				margin: 0 1.9rem
+				padding: 4px
+				margin: 0 30px
 				& a
 					font-size: 18px
 					color: $grey
@@ -24,11 +24,11 @@
 			cursor: pointer
 			display: flex
 			align-items: center
-			margin-left: 2.1rem
+			margin-left: 60px
 			&-icon
-				width: 1.5rem
-				height: 1.5rem
-				margin-right: 0.625rem
+				width: 24px
+				height: 24px
+				margin-right: 10px
 			&-counter
 				@include font(16px, 400, 'SourceSansPro')
 				color: $gold
@@ -37,23 +37,33 @@
 .burger
 	display: none
 	position: relative
-	width: 0.875rem
-	height: 0.625rem
-	margin: 0.4375rem 0.3125rem
+	width: 14px
+	height: 9px
+	margin: 7px 5px
 	span
 		position: absolute
 		background-color: $text-color
 		width: 100%
-		height: 0.0625rem
-		top: 0.25rem
+		height: 1px
+		top: 4px
+		transition: .3s
 	&::before,
 	&::after
 		content: ''
 		width: 100%
 		background-color: $text-color
 		position: absolute
-		height: 0.0625rem
+		height: 1px
+		transition: .3s
 	&::before
 		top: 0
 	&::after
 		bottom: 0
+	&.active:before
+		transform: rotate(45deg)
+		top: 4px
+	&.active:after
+		transform: rotate(-45deg)
+		bottom: 4px
+	&.active span
+		transform: scale(0)

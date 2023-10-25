@@ -29,6 +29,7 @@ const body = document.querySelector('body'),
 burger.addEventListener('click', function () {
   this.classList.toggle('active')
   mobileMenu.classList.toggle('active')
+  body.classList.toggle('lock')
 })
 
 if (filterIcon) {

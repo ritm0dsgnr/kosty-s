@@ -1,7 +1,7 @@
 @import "assets"
 
 *::-webkit-scrollbar 
-	width: 0.8rem
+	width: 14px
 
 *::-webkit-scrollbar-track
 	background: $backround-light
@@ -27,23 +27,39 @@ body
 	overflow-x: hidden
 	&.lock
 		overflow: hidden
-		& .page
-			padding-right: 0.8rem
+		@media only screen and (min-width : 730px)
+			& .page
+				padding-right: 14px
 
 .page
 	overflow: hidden
 	min-height: 100vh
 
 .container, .container-obj
-	width: 95rem
+	width: 1520px
+	@media only screen and (max-width : 1920px)
+		padding: 0 calc(10px + (0 - 10) * ((100vw - 1300px) / (1920 - 1300)))
+		width: calc(1300px + (1520 - 1300) * ((100vw - 1300px) / (1920 - 1300)))
+	@media only screen and (max-width : 1300px)
+		padding: 0 calc(10px + (0 - 10) * ((100vw - 1060px) / (1300 - 1060)))
+		width: calc(1060px + (1100 - 1060) * ((100vw - 1060px) / (1300 - 1060)))
+	@media only screen and (max-width : 1060px)
+		padding: 0
+		width: 932px
+	@media only screen and (max-width : 1024px)
+		padding: 0 calc(10px + (0 - 10) * ((100vw - 390px) / (1024 - 390)))
+		width: calc(390px + (896 - 390) * ((100vw - 390px) / (1024 - 390)))
+	@media only screen and (max-width : 390px)
+		padding: 0
+		width: 338px
 	margin: 0 auto
 
 .arrow
 	cursor: pointer
 	stroke: $text-color
 	stroke-width: 1px
-	width: 1.5rem
-	height: 1.5rem
+	width: 24px
+	height: 24px
 	&.rotate
 		transform: rotate(180deg)
 	&.down

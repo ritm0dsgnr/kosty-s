@@ -1,20 +1,20 @@
 .catalog
   position: relative
   &__header
-    padding: 1.5rem 0rem 2rem 0rem
+    padding: 24px 0 32px 0
     &-title
       @include font(28px, 600, 'CormorantGaramond')
   &__nav
     position: relative
     width: 100%
-    border-top: 0.0625rem $dark-grey solid
-    border-bottom: 0.0625rem $dark-grey solid
+    border-top: 1px $dark-grey solid
+    border-bottom: 1px $dark-grey solid
     &::after
       position: absolute
       top: 50%
       content: ''
       width: 100%
-      height: 0.0625rem
+      height: 1px
       background-color: $dark-grey
       display: block
     &__wrapper
@@ -25,36 +25,36 @@
         display: flex
         align-items: center
         justify-content: space-between
-        border-right: 0.0625rem $dark-grey solid
-        padding: 0rem 0.625rem 0rem 1.5rem
+        border-right: 1px $dark-grey solid
+        padding: 0 10px 0 24px
         &:nth-child(4),&:nth-child(8)
           border-right: none
-        @media only screen and (min-width : 1060px)
+        @media only screen and (min-width : 1061px)
           &:first-child, &:nth-child(5)
-            padding: 0rem 0.625rem 0rem 0
+            padding: 0 10px 0 0
         &.active
           background-color: $backround-light
         &.active &-name
             color: $gold
         &-name
           font-size: 20px
-          white-space: nowrap
+          white-space: normal
           display: flex
           align-items: center
           & .close
             display: none
         &-ph
-          width: 4.5rem
-          height: 4.5rem
+          width: 72px
+          height: 72px
   &__queries
     display: flex
     align-items: center
-    padding: 2.75rem 0rem
+    padding: 44px 0
     &-filter
       cursor: pointer
-      width: 1.5rem
-      height: 1.5rem
-      margin-right: 0.5rem
+      width: 24px
+      height: 24px
+      margin-right: 8px
     &__wrapper
       display: flex
       flex-wrap: wrap
@@ -62,37 +62,49 @@
       &-item
         display: flex
         align-items: center
-        padding: 0.25rem 0.5rem 0.25rem 1rem
-        border-radius: 4.875rem
+        padding: 4px 8px 4px 16px
+        border-radius: 78px
         background: rgba(161, 158, 158, 0.10)
-        margin-right: 0.5rem
+        margin-right: 8px
         &-name
           white-space: nowrap
           font-size: 20px
           color: $grey
-          margin-right: 0.5rem
+          margin-right: 8px
         & img
           cursor: pointer
-          width: 1.5rem
-          height: 1.5rem
+          width: 24px
+          height: 24px
   &__cards
     display: grid
     grid-template-columns: repeat(4, 1fr)
-    gap: 0 1.25rem
-    margin-bottom: -2rem
+    gap: 0 20px
+    margin-bottom: -32px
     &-card
-      margin: 1rem 1rem 3rem 1rem
+      margin: 16px 16px 48px 16px
       &-img
         width: 100%
-        height: 20.8125rem
-        margin-bottom: 0.62rem
+        height: 333px
+        margin-bottom: 10px
+        @media only screen and (max-width : 1920px)
+          height: calc(273px + (333 - 273) * ((100vw - 1301px) / (1920 - 1301)))
+        @media only screen and (max-width : 1300px)
+          height: calc(213px + (228 - 213) * ((100vw - 1061px) / (1300 - 1061)))
+        @media only screen and (max-width : 1060px)
+          height: calc(172px + (265 - 172) * ((100vw - 731px) / (1060 - 731)))
+        @media only screen and (max-width : 730px)
+          height: calc(189px + (283 - 189) * ((100vw - 501px) / (730 - 501)))
+        @media only screen and (max-width : 500px)
+          height: calc(340px + (430 - 340) * ((100vw - 390px) / (500 - 390)))
+        @media only screen and (max-width : 390px)
+          height: 306px
         & img
           width: 100%
           height: 100%
           object-fit: cover
       &-header
-        border-top: 0.0625rem $dark-grey solid
-        padding: 0.63rem 0
+        border-top: 1px $dark-grey solid
+        padding: 10px 0
         display: flex
         align-items: center
         justify-content: space-between
@@ -101,24 +113,24 @@
           color: $grey
         &-price
           @include font(16px, 300, 'SourceSansPro')
-          line-height: 1.5rem
+          line-height: 24px
       &-name
         font-size: 16px
-        line-height: 1.4rem
+        line-height: 22.4px
         overflow: hidden
         text-overflow: ellipsis
         display: -webkit-box
         -webkit-line-clamp: 2
         -webkit-box-orient: vertical
   &__pagination
-    padding: 1.5rem 0
+    padding: 24px 0
     display: flex
     align-items: center
     justify-content: flex-end
     &-count
       @include font(16px, 300, 'SourceSansPro')
-      line-height: 1.5rem
-      margin: 0 1.5rem
+      line-height: 24px
+      margin: 0 24px
       & span
         font-size: 10px
 
@@ -135,47 +147,49 @@
     display: block
   &__popup
     overflow-y: auto
-    width: 39.375rem
+    max-width: 630px
     height: 100%
-    padding: 1.5rem 3.12rem 4rem 3.12rem
+    padding: 24px 50px 64px 50px
     color: $backround
     background-color: $text-color
   &__close
     display: flex
     justify-content: flex-end
-    padding-bottom: 0.5rem
-    border-bottom: 0.0625rem $dark-grey solid
+    padding-bottom: 8px
+    border-bottom: 1px $dark-grey solid
     & img
       cursor: pointer
-      width: 2.5rem
-      height: 2.5rem
+      width: 40px
+      height: 40px
   &__queries
-    padding: 2rem 0
-    & .catalog__queries__wrapper-item
-      margin: 0.69rem 1rem 0.69rem 0
+    padding: 32px 0
+    & .catalog__queries__wrapper
+      margin: -6px -8px
+      &-item
+        margin: 6px 8px
       &-name
         color: $backround
   &__checkbox
     display: flex
     align-items: center
-    margin-bottom: 1.5rem
+    margin-bottom: 24px
     &-checkbox
       cursor: pointer
       position: relative
-      width: 1.5rem
-      height: 1.5rem
-      border: 0.0625rem $dark-grey solid
-      margin-right: 1rem
+      width: 24px
+      height: 24px
+      border: 1px $dark-grey solid
+      margin-right: 16px
       &.active::after
         position: absolute
-        top: 0.375rem
-        left: 0.1875rem
+        top: 6px
+        left: 4px
         content: ''
         background-image: url('../img/done-icon.svg')
         background-repeat: no-repeat
         background-size: cover
-        width: 0.875rem
-        height: 0.625rem
+        width: 14px
+        height: 10px
         display: block
     &-lable
       @include font(16px, 300, 'SourceSansPro')
@@ -183,17 +197,18 @@
     position: relative
     &-tab
       position: relative
-      padding-bottom: 0.25rem
-      border-bottom: 0.0625rem $dark-grey solid
+      padding-bottom: 4px
+      border-bottom: 1px $dark-grey solid
       & img
-        width: 1.5rem
-        height: 1.5rem
+        width: 24px
+        height: 24px
+        transition: transform .3s
       &.active &-head img
         transform: rotate(180deg)
       &.active &-checkbox
         display: block
       &:not(:last-child)
-        margin-bottom: 1.5rem
+        margin-bottom: 24px
       &-head
         cursor: pointer
         display: flex
@@ -206,13 +221,13 @@
       &-checkbox
         display: none
         & .filter__checkbox
-          padding: 0.5rem 0
+          padding: 8px 0
           margin-bottom: 0
   &__btns
     display: grid
     grid-template-columns: repeat(2, 1fr)
-    gap: 0.62rem
-    margin-top: 2.70rem
+    gap: 10px
+    margin-top: 43px
     &-btn
       cursor: pointer
       @include font(16px, 400, 'SourceSansPro')
@@ -220,13 +235,9 @@
       display: flex
       align-items: center
       justify-content: center
-      padding: 0.5rem 0 0.62rem 0
+      padding: 8px 0 10px 0
       &.white
-        border: 0.0625rem $dark-grey solid
+        border: 1px $dark-grey solid
       &.dark
         color: $text-color
         background-color: $backround
-
-@media only screen and (max-width : 1060px) 
-  br
-    display: none
