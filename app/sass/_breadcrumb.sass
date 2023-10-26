@@ -15,9 +15,12 @@
 				display: flex
 				align-items: center
 				& a
-					@include font(16px, 400, 'SourceSansPro')
+					@include font(16px, 300, 'SourceSansPro')
 					color: $grey
+					&:hover
+						font-weight: 400
 				&.active a
+					font-weight: 400
 					color: $text-color
 			& &-item:not(:last-child)::after
 				content: ''

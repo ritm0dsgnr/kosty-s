@@ -54,12 +54,15 @@ body
 		width: 338px
 	margin: 0 auto
 
-.arrow
+.arrow, .close
 	cursor: pointer
 	stroke: $text-color
 	stroke-width: 1px
 	width: 24px
 	height: 24px
+	transition: .3s
+	&:hover
+		stroke-width: 1.5px
 	&.rotate
 		transform: rotate(180deg)
 	&.down

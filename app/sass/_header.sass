@@ -17,8 +17,10 @@
 				margin: 0 30px
 				& a
 					font-size: 18px
+					font-weight: 400
 					color: $grey
 				&.active a
+					font-weight: 700
 					color: $text-color
 		&-shopping
 			cursor: pointer
@@ -29,17 +31,25 @@
 				width: 24px
 				height: 24px
 				margin-right: 10px
+				stroke: $gold
+				stroke-width: 1px
+				transition: .3s
+				&:hover
+					stroke-width: 1.5px
 			&-counter
 				@include font(16px, 400, 'SourceSansPro')
 				color: $gold
 				text-decoration: underline
 
 .burger
+	cursor: pointer
 	display: none
 	position: relative
 	width: 14px
 	height: 9px
 	margin: 7px 5px
+	&:hover span, &:hover::before, &:hover::after
+		height: 1.5px
 	span
 		position: absolute
 		background-color: $text-color

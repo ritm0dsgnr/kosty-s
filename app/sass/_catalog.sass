@@ -27,6 +27,9 @@
         justify-content: space-between
         border-right: 1px $dark-grey solid
         padding: 0 10px 0 24px
+        transition: .3s
+        &:hover
+          background-color: $backround-light
         &:nth-child(4),&:nth-child(8)
           border-right: none
         @media only screen and (min-width : 1061px)
@@ -55,22 +58,37 @@
       width: 24px
       height: 24px
       margin-right: 8px
+      fill: $text-color
+      stroke: $text-color
+      stroke-width: 1px
+      transition: .3s
+      &:hover
+        stroke-width: 1.5px
     &__wrapper
       display: flex
       flex-wrap: wrap
       align-items: center
       &-item
+        cursor: pointer
         display: flex
         align-items: center
         padding: 4px 8px 4px 16px
         border-radius: 78px
         background: rgba(161, 158, 158, 0.10)
         margin-right: 8px
+        & .close
+          stroke: $grey
+        &:hover .close
+          stroke: $text-color
+          stroke-width: 1.5px
+        &:hover &-name
+          color: $text-color
         &-name
           white-space: nowrap
           font-size: 20px
           color: $grey
           margin-right: 8px
+          transition: .3s
         & img
           cursor: pointer
           width: 24px
@@ -81,7 +99,11 @@
     gap: 0 20px
     margin-bottom: -32px
     &-card
-      margin: 16px 16px 48px 16px
+      border: 1px solid transparent
+      padding: 16px 16px 48px 16px
+      transition: .3s
+      &:hover
+        border: 1px solid $dark-grey
       &-img
         width: 100%
         height: 333px
@@ -157,18 +179,28 @@
     justify-content: flex-end
     padding-bottom: 8px
     border-bottom: 1px $dark-grey solid
-    & img
+    & svg
       cursor: pointer
       width: 40px
       height: 40px
+      stroke: $backround
   &__queries
     padding: 32px 0
     & .catalog__queries__wrapper
       margin: -6px -8px
       &-item
         margin: 6px 8px
-      &-name
-        color: $backround
+        transition: .3s
+        & .close
+          stroke: $backround
+        &:hover &.close
+          stroke: $backround
+        &:hover
+          background-color: $grey-hover
+        &:hover .catalog__queries__wrapper-item-name
+            color: $backround
+        &-name
+          color: $backround
   &__checkbox
     display: flex
     align-items: center

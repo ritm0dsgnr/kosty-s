@@ -2,4 +2,19 @@
   <symbol id="arrow" viewBox="0 0 24 24">
     <path d="M18 12L6 12M6 12L10 8M6 12L10 16"/>
   </symbol>
+  <symbol id="bag" viewBox="0 0 24 24">
+    <path d="M18.5 7.5H5.5V21.5H18.5V7.5Z"/>
+    <path d="M15.5 10V3H8.5V10"/>
+  </symbol>
+  <symbol id="filter" viewBox="0 0 24 24">
+    <line x1="5" y1="8.5" x2="19" y2="8.5"/>
+    <line x1="5" y1="15.5" x2="19" y2="15.5"/>
+    <rect x="7" y="7" width="3" height="3"/>
+    <rect x="14" y="14" width="3" height="3"/>
+  </symbol>
+  <symbol id="close" viewBox="0 0 24 24">
+    <path d="M5.68629 17.3137L17 6"/>
+    <path d="M5.68629 5.68629L17 17"/>
+  </symbol>
 </svg>
+
