@@ -1,34 +1,146 @@
 @import "vars"
 
+@media only screen and (max-width : 1920px)
+  .main__catalog-wrapper-item
+    width: calc(218px + (365 - 218) * ((100vw - 1060px) / (1920 - 1060)))
+    height: calc(218px + (365 - 218) * ((100vw - 1060px) / (1920 - 1060)))
+  .about__wrapper-slider-img
+    min-width: calc(454px + (1042 - 454) * ((100vw - 1060px) / (1920 - 1060)))
+  .main__form-wrapper
+    max-width: calc(466px + (750 - 466) * ((100vw - 730px) / (1920 - 730)))
+  .obj__wrapper-gallery-main
+    width: calc(456px + (622 - 456) * ((100vw - 1250px) / (1920 - 1250)))
+    height: calc(456px + (622 - 456) * ((100vw - 1250px) / (1920 - 1250)))
+  .obj__wrapper-gallery-nav
+    height: calc(456px + (622 - 456) * ((100vw - 1250px) / (1920 - 1250)))
+    &-ph
+      min-width: calc(75px + (108 - 75) * ((100vw - 1250px) / (1920 - 1250)))
+      height: calc(75px + (108 - 75) * ((100vw - 1250px) / (1920 - 1250)))
+  .obj__wrapper-info
+    margin: 0 calc(95px + (128 - 95) * ((100vw - 1250px) / (1920 - 1250))) 0 calc(115px + (148 - 115) * ((100vw - 1250px) / (1920 - 1250)))
+  .obj__wrapper-description-logo
+    width: calc(75px + (108 - 75) * ((100vw - 1250px) / (1920 - 1250)))
+  .obj__wrapper-description-text
+    width: calc(456px + (624 - 456) * ((100vw - 1250px) / (1920 - 1250)))
+@media only screen and (max-width : 1250px)
+  .obj__wrapper-gallery-main
+    width: calc(455px + (550 - 455) * ((100vw - 1060px) / (1250 - 1060)))
+    margin-bottom: 20px
+  .obj__wrapper-gallery-nav
+    width: calc(455px + (550 - 455) * ((100vw - 1060px) / (1250 - 1060)))
+    &-ph
+      min-width: calc(60px + (80 - 60) * ((100vw - 390px) / (1250 - 390)))
+      height: calc(60px + (80 - 60) * ((100vw - 390px) / (1250 - 390)))
+  .obj__wrapper-info
+    margin: 0 0 0 calc(100px + (116 - 100) * ((100vw - 1060px) / (1250 - 1060)))
+  .obj__wrapper-description-logo
+    display: none
+  .obj__wrapper-description-text
+    width: calc(455px + (550 - 455) * ((100vw - 1060px) / (1250 - 1060)))
+@media only screen and (max-width : 1060px)
+  .main__catalog-wrapper-item
+    width: calc(187px + (297 - 187) * ((100vw - 730px) / (1060 - 730)))
+    height: calc(187px + (297 - 187) * ((100vw - 730px) / (1060 - 730)))
+  .value__wrapper-content-text
+    font-size: calc(28px + (36 - 28) * ((100vw - 730px) / (1060 - 730)))
+  .obj__wrapper-gallery-main
+    width: calc(291px + (455 - 291) * ((100vw - 730px) / (1060 - 730)))
+  .obj__wrapper-gallery-nav
+    width: calc(291px + (455 - 291) * ((100vw - 730px) / (1060 - 730)))
+  .obj__wrapper-info
+    margin: 0 0 0 calc(20px + (100 - 20) * ((100vw - 730px) / (1060 - 730)))
+  .obj__wrapper-description-text
+    width: calc(291px + (455 - 291) * ((100vw - 730px) / (1060 - 730)))
+@media only screen and (max-width : 730px)
+  .main__catalog-wrapper-item
+    width: calc(219px + (333 - 219) * ((100vw - 500px) / (730 - 500)))
+    height: calc(219px + (333 - 219) * ((100vw - 500px) / (730 - 500)))
+  .main__wrapper-col-item-link::after
+    width: calc(232px + (570 - 232) * ((100vw - 390px) / (730 - 390)))
+@media only screen and (max-width : 500px)
+  .main__catalog-wrapper-item
+    width: calc(338px + (447 - 338) * ((100vw - 390px) / (500 - 390)))
+    height: calc(338px + (447 - 338) * ((100vw - 390px) / (500 - 390)))
+
+@media only screen and (max-width : 1500px)
+  .main__wrapper-col-title span
+    margin-left: 194px
+  .main__wrapper-col-text
+    max-width: 475px
+    margin-top: 200px
+    margin-left: 107px
+  .main__wrapper-col-item
+    margin-bottom: 70px
 @media only screen and (max-width : 1300px)
   .main__footer
     padding: 70px 0 32px
     &-item-wrapper
       gap: 18px
-  .obj__wrapper-gallery-nav
-    height: 29.8125rem
-    margin-right: 1rem
-    &-ph
-      width: 5.25rem
-      height: 5.25rem
-  .obj__wrapper-gallery-main
-    width: 29.8125rem
-    height: 29.8125rem
-  .obj__wrapper-info
-    width: 30.8125rem
-    margin: 0 6.2rem 0 7.4rem
-    &-name
-      min-height: 6rem
-  .obj__wrapper-description-logo
-    width: 5.25rem
-    margin-right: 1rem
-  .obj__wrapper-description-text
-    width: 29.8125rem
-  .obj__wrapper-info-request-btn, .obj__wrapper-info-price-btn
-    min-width: 11.125rem
-  .container-obj .main__footer
-    padding: 4rem 0
+@media only screen and (max-width : 1250px)
+  .main
+    margin-top: 10px
+    &__wrapper
+      padding-bottom: 325px
+      &-col-title
+        font-size: 70px
+        line-height: 70px
+        padding: 10px
+        & span
+          margin-top: -12px
+          margin-left: 297px
+      &-col-item
+        position: absolute
+        right: 0
+        bottom: 0
+        margin-bottom: 0
+      &-col-text
+        margin-top: 89px
+        margin-left: 0
+  .obj__wrapper-gallery
+    flex-direction: column-reverse
+    justify-content: flex-end
+    &-nav
+      display: flex
+      height: auto
+      margin-right: 0
+      &-ph:not(:last-child)
+        margin-right: 20px
+        margin-bottom: 0
 @media only screen and (max-width : 1060px)
+  .main__wrapper
+    flex-direction: column
+    align-items: inherit
+    padding-bottom: 218px
+    &-col-text
+      max-width: 498px
+      position: absolute
+      right: 0
+      bottom: 0
+    &-col-item
+      margin-top: 55px
+      position: relative
+      bottom: inherit
+      margin-left: auto
+    &-col-title
+      font-size: 60px
+      line-height: 60px
+      padding: calc(0px + (10 - 0) * ((100vw - 730px) / (1060 - 730)))
+      & span
+        margin-top: 0
+        margin-left: 126px
+      & br
+        display: block
+  .main__catalog-wrapper
+    grid-template-columns: repeat(3, 1fr)
+  .about__wrapper
+    flex-direction: column
+    &-description
+      margin-bottom: 64px
+    &-slider
+      margin-left: 0
+      &-img
+        width: 100%
+        height: 565px
   .catalog__nav
     overflow: hidden
     padding: 15px 0
@@ -61,52 +173,46 @@
           display: none
   .catalog__cards
     grid-template-columns: repeat(3, 1fr)
-@media only screen and (max-width : 1024px)
-  .obj__wrapper-gallery
-    flex-direction: column-reverse
-    &-main
-      width: 32.125rem
-      height: 32.125rem
-      margin-bottom: 1.25rem
-    &-nav
-      overflow-x: auto
-      width: 32.125rem
-      height: auto
-      display: flex
-      margin-right: 0
-      &::-webkit-scrollbar
-        width: 0
-        height: 0
-      &-ph
-        width: 3.5rem
-        height: 3.5rem
-        &:not(:last-child)
-          margin-bottom: 0
-          margin-right: 1.25rem
-  .obj__wrapper-info
-    width: auto
-    margin: 0 0 0 6.1rem
-    &.contact
-      margin: 0
-      width: 22.625rem
-    &-name
-      overflow: hidden
-      text-overflow: ellipsis
-      display: -webkit-box
-      -webkit-line-clamp: 2
-      -webkit-box-orient: vertical
-      min-height: auto
-      margin-bottom: 9.38rem
-    &-price-btn
-      min-width: 13.625rem
-  .obj__wrapper-description-logo
-    display: none
-  .obj__wrapper-description-text
-    width: 27.375rem
 @media only screen and (max-width : 730px)
+  .main__wrapper
+    padding-bottom: 0
+    &-col-title
+      font-size: 50px
+      line-height: 50px
+      & span
+        margin-left: 0
+        text-align: right
+    &-col-text
+      position: relative
+      font-size: 16px
+      line-height: 24px
+      max-width: 345px
+      margin-top: 168px
+    &-col-item
+      margin-top: 62px
+      width: 100%
+      &-img
+        width: 100%
+      &-name br
+        display: block
+      &-link
+        display: flex
+  .main__catalog-wrapper
+    grid-template-columns: repeat(2, 1fr)
+  .value__wrapper
+    flex-direction: column
+    &-content-text
+      font-size: 36px
+      & span
+        margin-left: 0
+    &-content.active
+      margin-top: 64px
+      display: block
+  .main__form-wrapper
+    max-width: 677px
   .header
     flex-wrap: wrap
-    padding: 32px 0rem 26px 0rem
+    padding: 32px 0 26px 0
     &__wrapper
       display: none
       position: fixed
@@ -162,6 +268,8 @@
     &-item-title
       font-size: 16px
       margin-bottom: 16px
+  .container-obj .main__footer
+    margin-top: 0
   .main__footer
     margin-top: 100px
     padding: 64px 0 32px
@@ -183,61 +291,40 @@
         grid-area: col3
       & div:nth-child(3)
         grid-area: col1
+  .obj__wrapper
+    display: block
+  .obj__wrapper-gallery-main
+    width: 100%
+    height: calc(337px + (677 - 337) * ((100vw - 390px) / (730 - 390)))
+  .obj__wrapper-gallery-nav
+    width: 100%
+    margin-bottom: 20px
+  .obj__wrapper-info
+    margin: 0
+    &-name
+      margin-bottom: 120px
+  .obj__wrapper-description-text
+    width: 100%
+    margin-bottom: 64px
+  .obj__wrapper-info-request
+    margin-top: 118px
 @media only screen and (max-width : 500px)
+  .main__catalog-wrapper
+    grid-template-columns: repeat(1, 1fr)
   .catalog__cards
     grid-template-columns: repeat(1, 1fr)
 @media only screen and (max-width : 390px)
+  .main__form-wrapper-title
+    font-size: 28px
   .filter
     width: 100%
     &__popup
       width: 100%
       padding: 16px 24px 48px 24px
-  .obj .order .order__popup
-    padding: 1rem 1.5rem 3rem 1.5rem
-  .breadcrumb
-    border-top: none
-    &__wrapper-list
-      display: none
-  .catalog__header
-    padding: 2rem 0rem
-  .catalog__queries
-    padding: 1rem 0
-  .contact__footer
-    padding: 2.62rem 0
-    grid-template-columns: repeat(1, 1fr)
-    &-item-title
-      @include font(20px, 500, 'CormorantGaramond')
-      line-height: normal
-      margin-bottom: 1rem
-    &-item-contact-text
-      padding: 1.2rem 0
-  .obj__wrapper
-    flex-direction: column
-    &-gallery
-      overflow: hidden
-      width: 100%
-      &-main
-        width: 100%
-        height: 21.125rem
-  .obj__wrapper-info
-    margin: 1.25rem 0 0 0
-    &.contact
-      width: 100%
-    &-name
-      margin-bottom: 8.4rem
-    &-request
-      margin-top: 7.2rem
-    &-request-btn, &-price-btn
-      min-width: 10rem
-  .obj__wrapper-description
-    margin-bottom: 4rem
-  .container-obj .contact__footer
-    padding: 4rem 0 3.30rem 0
-    &-item-title
-      font-size: 1.75rem
-      margin-bottom: 4rem
-
-
+  .breadcrumb__wrapper-list
+    display: none
+  .order__popup
+    padding: 6px 10px 32px 10px
 @media only screen and (max-width : 1060px) 
   br
     display: none

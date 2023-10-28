@@ -1,0 +1,255 @@
+.main
+  margin-top: 24px
+  & .container-main
+    position: relative
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: -1
+    width: 100%
+    height: 100%
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+  &__wrapper
+    position: relative
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    &-col
+      margin: 0
+      &-title
+        @include font(64px, 700, 'CormorantGaramond')
+        line-height: 64px
+        text-transform: uppercase
+        span
+          display: block
+          margin-left: 206px
+          color: $gold
+      &-text
+        @include font(20px, 300, 'SourceSansPro')
+        line-height: 32px
+        width: 577px
+        margin-top: 185px
+        margin-left: 206px
+        color: $gold
+      &-item
+        width: 320px
+        margin-bottom: 20px
+        &-title
+          @include font(36px, 600, 'CormorantGaramond')
+          color: $gold
+          padding-bottom: 8px
+          border-bottom: 1px $dark-grey solid
+        &-img
+          width: 320px
+          height: 320px
+          margin: 8px 0
+          img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &-type
+          @include font(14px, 400, 'SourceCodePro')
+          color: $grey
+          line-height: 18px
+          padding: 12px 0 16px 0
+          border-top: 1px $dark-grey solid
+        &-name
+          @include font(20px, 500, 'CormorantGaramond')
+          margin-right: 40px
+          overflow: hidden
+          text-overflow: ellipsis
+          display: -webkit-box
+          -webkit-line-clamp: 2
+          -webkit-box-orient: vertical
+        &-link
+          cursor: pointer
+          position: relative
+          @include font(16px, 400, 'SourceSansPro')
+          display: none
+          align-items: center
+          justify-content: space-between
+          margin-top: 8px
+          &::after
+            position: absolute
+            right: 7px
+            content: ''
+            width: 200px
+            height: 2px
+            background-color: #fff
+            display: block
+          & .arrow
+            width: 30px
+            height: 30px
+
+.main__catalog
+  margin-top: 100px
+  &-title
+    @include font(50px, 600, 'CormorantGaramond')
+    line-height: 50px
+    padding: 24px 0 32px 0
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 20px
+    &-item
+      cursor: pointer
+      position: relative
+      width: 365px
+      height: 365px
+      background: rgba(255, 255, 255, 0.05)
+      overflow: hidden
+      padding: 20px
+      transition: .3s
+      &:hover
+        background: rgba(255, 255, 255, 0.10)
+      &-ph
+        position: absolute
+        top: 0
+        right: 0
+        z-index: -1
+        width: 100%
+        height: 100%
+        padding: 20px
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+      &-info
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        & .card-arrow
+          width: 40px
+          height: 40px
+          margin-left: auto
+          stroke: $grey
+          fill: transparent
+        &-name
+          @include font(20px, 500, 'CormorantGaramond')
+      &-link
+        cursor: pointer
+        position: relative
+        @include font(20px, 500, 'CormorantGaramond')
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        & br
+          display: block
+        &::after
+          position: absolute
+          right: 7px
+          bottom: 14px
+          content: ''
+          width: 97%
+          height: 2px
+          background-color: #fff
+          display: block
+        & .arrow
+          width: 30px
+          height: 30px
+          margin-left: auto
+
+.value
+  margin: 100px 0
+  padding: 32px 0
+  &__wrapper
+    display: flex
+    &-nav
+      display: flex
+      &-nav
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        margin-right: 11px
+      &-items
+        position: relative
+        &-item
+          cursor: pointer
+          @include font(20px, 500, 'CormorantGaramond')
+          color: $grey
+          white-space: nowrap
+          &:not(:last-child)
+            margin-bottom: 20px
+          &.active
+            transition: .3s
+            color: $text-color
+    &-content
+      width: 100%
+      display: none
+      align-items: center
+      justify-content: center
+      &.active
+        display: flex
+      &-text
+        @include font(36px, 600, 'CormorantGaramond')
+        color: $grey
+        span
+          display: block
+          margin-left: 35px
+.about
+  margin: 100px 0
+  padding: 34px 0
+  &__wrapper
+    display: flex
+    &-description
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin-bottom: 75px
+      &-title
+        @include font(44px, 600, 'CormorantGaramond')
+        margin-bottom: 44px
+      &-text
+        @include font(18px, 300, 'SourceSansPro')
+        color: $grey
+        line-height: 26.6px
+    &-slider
+      margin-left: 40px
+      &-img
+        display: none
+        min-width: 1042px
+        height: 443px
+        &.active
+          display: block
+        img
+          width: 100%
+          height: 100%
+          object-fit: cover
+      &-nav
+        padding: 24px 0
+        display: flex
+        align-items: center
+        justify-content: flex-end
+  
+.main__form
+  margin: 100px 0 0 0
+  padding: 27px 0 56px 0
+  &-wrapper
+    max-width: 750px
+    margin: 0 auto
+    &-title
+      @include font(44px, 600, 'CormorantGaramond')
+      line-height: 53px
+      margin-bottom: 18px
+    &-subtitle
+      @include font(16px, 300, 'SourceSansPro')
+      color: $grey
+      line-height: 24px
+    &-text
+      @include font(18px, 300, 'SourceSansPro')
+      line-height: 26px
+      margin: 64px 0
+
+
+        
+       

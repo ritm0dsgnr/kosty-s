@@ -1,25 +1,23 @@
 .obj
 	position: relative
 	&__wrapper
-		margin: 4rem 0
+		margin-top: 64px
 		display: flex
 		justify-content: space-between
-		align-items: flex-start
-		&.description
-			align-items: stretch
+		align-items: stretch
 		&-gallery
 			display: flex
 			align-items: flex-start
 			&-nav
-				height: 38.875rem
+				height: 622px
 				overflow: hidden
-				margin-right: 1.25rem
+				margin-right: 20px
 				&-ph
 					cursor: pointer
-					width: 6.75rem
-					height: 6.75rem
+					min-width: 108px
+					height: 108px
 					&:not(:last-child)
-						margin-bottom: 1.25rem
+						margin-bottom: 20px
 					& img
 						width: 100%
 						height: 100%
@@ -27,8 +25,8 @@
 			&-main
 				cursor: pointer
 				overflow: hidden
-				width: 38.875rem
-				height: 38.875rem
+				width: 622px
+				height: 622px
 				@media only screen and (min-width : 390px)
 					&:hover img
 						transform: scale(2.5)
@@ -38,95 +36,89 @@
 						object-fit: cover
 						transition: transform .3s
 		&-info
+			display: flex
+			flex-direction: column
+			justify-content: space-between
 			width: 100%
-			margin: 0 8rem 0 9.25rem
-			&.contact
-				display: flex
-				flex-direction: column
-				justify-content: space-between
+			margin: 0 128px 0 148px
 			&-type, &-title, &-specifications-type, &-specifications-name
-				@include font(0.875rem, 400, 'SourceCodePro')
+				@include font(14px, 400, 'SourceCodePro')
 			&-type
-				margin-bottom: 1.5rem
+				margin-bottom: 24px
 			&-name
-				@include font(1.75rem, 600, 'CormorantGaramond')
-				min-height: 15.125rem
-				margin-bottom: 1.5rem
+				@include font(28px, 600, 'CormorantGaramond')
+				overflow: hidden
+				text-overflow: ellipsis
+				display: -webkit-box
+				-webkit-line-clamp: 2
+				-webkit-box-orient: vertical
+				margin-bottom: 24px
 			&-specifications
-				padding: 1rem 0 1.5rem 0
+				padding: 16px 0 24px 0
 				display: grid
 				grid-template-columns: auto 1fr
-				gap: 0.25rem 1.8rem
+				gap: 4px 28.8px
 				&-type
 					color: $grey
 			&-delivery
-				@include font(1rem, 400, 'SourceSansPro')
-				padding: 1.5rem 0
-				border-top: 0.0625rem $dark-grey solid
-				border-bottom: 0.0625rem $dark-grey solid
+				@include font(16px, 400, 'SourceSansPro')
+				padding: 24px 0
+				border-top: 1px $dark-grey solid
+				border-bottom: 1px $dark-grey solid
 			&-price
-				margin: 2.2rem 0 0.58rem 0
+				margin: 35px 0 9px 0
 				display: flex
 				align-items: center
 				justify-content: space-between
-				&-price, &-btn
-					@include font(1rem, 400, 'SourceSansPro')
 				&-btn
-					cursor: pointer
-					display: flex
-					align-items: center
-					justify-content: center
-					min-width: 10.625rem
-					padding: 0.5rem 1.5rem 0.62rem 1.5rem
 					background-color: $gold
+					transition: .3s
+					&:hover
+						background-color: $gold-dark
 			&-contact-title
-				@include font(1.25rem, 500, 'CormorantGaramond')
-				margin-bottom: 1rem
+				@include font(20px, 500, 'CormorantGaramond')
+				margin-bottom: 16px
 			&-request
 				display: flex
 				align-items: center
 				justify-content: space-between
-				margin-bottom: 0.3rem
+				margin-bottom: 4.8px
 				&-text
-					@include font(1rem, 300, 'SourceSansPro')
+					@include font(16px, 300, 'SourceSansPro')
 					color: $grey
-					line-height: 1.5rem
+					line-height: 24px
 				&-btn
-					cursor: pointer
-					@include font(1rem, 400, 'SourceSansPro')
-					display: flex
-					align-items: center
-					justify-content: center
-					min-width: 14.8125rem
-					border: 0.0625rem $text-color solid
-					padding: 0.5rem 1.5rem 0.62rem 1.5rem
+					border: 1px $text-color solid
+					transition: .3s
+					&:hover
+						background-color: $backround-light
 		&-description
 			display: flex
 			align-items: flex-start
 			&-logo
-				width: 6.75rem
-				margin-right: 1.25rem
+				width: 108px
+				margin-right: 20px
 				& img
-					width: 1rem
-					height: 1rem
-					margin-top: 0.3rem
+					width: 16px
+					height: 16px
+					margin-top: 4.8px
 			&-text
 				display: flex
 				flex-direction: column
 				justify-content: space-between
-				width: 39rem
+				width: 624px
 				height: 100%
-				border-bottom: 0.0625rem $dark-grey solid
+				border-bottom: 1px $dark-grey solid
 				&-title
-					@include font(1.25rem, 500, 'CormorantGaramond')
-					margin-bottom: 1rem
+					@include font(20px, 500, 'CormorantGaramond')
+					margin-bottom: 16px
 				&-text
-					@include font(1rem, 300, 'SourceSansPro')
-					line-height: 1.5rem
+					@include font(16px, 300, 'SourceSansPro')
+					line-height: 24px
 					color: $grey
 					overflow: hidden
-					height: 18rem
-					margin-bottom: 1rem
+					height: 288px
+					margin-bottom: 16px
 					&.active
 						height: auto
 				&-btn
@@ -134,16 +126,16 @@
 					display: flex
 					align-items: center
 					justify-content: flex-end
-					margin-bottom: 0.5rem
+					margin-bottom: 8px
 					&-text
-						@include font(1rem, 300, 'SourceSansPro')
+						@include font(16px, 300, 'SourceSansPro')
 						color: $grey
-						margin-right: 0.62rem
+						margin-right: 10px
 	&__related
-		position: relative
+		margin-top: 164px
 		&-title
-			@include font(1.75rem, 600, 'CormorantGaramond')
-			padding: 1.5rem 0 2rem 0
+			@include font(28px, 600, 'CormorantGaramond')
+			padding: 23px 0 32px 0
 		&-items
 			overflow: visible
 			display: flex
@@ -153,20 +145,22 @@
 				width: 0
 				height: 0
 			& .catalog__cards-card
-				margin: 1rem 2.3rem 1rem 1rem
-				min-width: 16.125rem
+				margin-right: 20px
+				margin-bottom: 0
+				min-width: 290px
 				&-img
-					height: 16.125rem
+					height: 258px
 		&-nav
 			display: flex
 			align-items: center
 			justify-content: flex-end
-			padding: 1.5rem 0
+			padding: 24px 0
 			& .arrow.rotate
-				margin-left: 1.5rem
+				margin-left: 24px
 
 .order
 	position: fixed
+	z-index: 1
 	inset: 0
 	display: flex
 	align-items: center
@@ -176,23 +170,23 @@
 	&.active
 		display: flex
 	&__popup
-		width: 39.375rem
+		width: 630px
 		height: auto
-		padding: 1rem 3.125rem 4rem 3.125rem
+		padding: 16px 50px 64px 50px
 		color: $backround
 		background-color: $text-color
 		& .filter__btns
-			margin-top: 1.56rem
+			margin-top: 25px
 		&-item
-			margin: 1.56rem 0
-			padding: 1rem
+			margin: 25px 0
+			padding: 16px
 			display: flex
 			align-items: flex-start
 			background: rgba(0, 0, 0, 0.05)
 			&-ph
-				width: 4.6rem
-				height: 4.6rem
-				margin-right: 1rem
+				width: 74px
+				height: 74px
+				margin-right: 16px
 				& img
 					width: 100%
 					height: 100%
@@ -200,38 +194,35 @@
 			&-info
 				position: relative
 				&-type
-					@include font(0.874rem, 400, 'SourceCodePro')
+					@include font(14px, 400, 'SourceCodePro')
 				&-name
-					@include font(1.75rem, 600, 'CormorantGaramond')
+					@include font(28px, 600, 'CormorantGaramond')
 		&-text
-			@include font(1.25rem, 500, 'CormorantGaramond')
+			@include font(20px, 500, 'CormorantGaramond')
 
 .filter.request__popup .filter__popup
 	display: flex
 	flex-direction: column
 	justify-content: space-between
 	margin-left: auto
+	& .obj__wrapper-info.contact
+		margin: 32px 0 0 0
 	
 .request__popup
 	display: none
 	margin: 0
 	&.active
 		display: block
-	& .obj__wrapper-info.contact
-		margin: 0
 	textarea
 		margin-bottom: 0
 	&-title
-		@include font(1.25rem, 500, 'CormorantGaramond')
-		margin: 1rem 0
+		@include font(20px, 500, 'CormorantGaramond')
+		margin: 16px 0
 	&-text
-		@include font(0.75rem, 300, 'SourceSansPro')
+		@include font(12px, 300, 'SourceSansPro')
+		margin-bottom: 16px
 	&-btn
-		display: flex
-		align-items: center
-		justify-content: center
 		width: 100%
-		padding: 0.5rem 1.5rem 0.62rem 1.5rem
 		color: $text-color
 		background-color: $backround
-		margin: 1rem 0
+		margin: 16px 0

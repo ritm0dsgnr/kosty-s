@@ -2,6 +2,8 @@
 
 *::-webkit-scrollbar 
 	width: 14px
+	@media only screen and (max-width : 730px)
+		width: 6px
 
 *::-webkit-scrollbar-track
 	background: $backround-light
@@ -35,8 +37,37 @@ body
 	overflow: hidden
 	min-height: 100vh
 
-.container, .container-obj
+.container-main
 	width: 1520px
+	margin: 0 auto
+	@media only screen and (max-width : 1920px)
+		width: calc(1320px + (1520 - 1320) * ((100vw - 1720px) / (1920 - 1720)))
+	@media only screen and (max-width : 1720px)
+		width: calc(1200px + (1419 - 1200) * ((100vw - 1500px) / (1720 - 1500)))
+	@media only screen and (max-width : 1500px)
+		width: calc(1050px + (1299 - 1050) * ((100vw - 1250px) / (1500 - 1250)))
+	@media only screen and (max-width : 1250px)
+		width: calc(932px + (1121 - 932) * ((100vw - 1060px) / (1250 - 1060)))
+	@media only screen and (max-width : 1060px)
+		width: calc(602px + (931 - 602) * ((100vw - 730px) / (1060 - 730)))
+	@media only screen and (max-width : 730px)
+		width: calc(338px + (677 - 338) * ((100vw - 390px) / (730 - 390)))
+
+.container-obj
+	width: 1520px
+	margin: 0 auto
+	@media only screen and (max-width : 1920px)
+		width: calc(1122px + (1520 - 1122) * ((100vw - 1250px) / (1920 - 1250)))
+	@media only screen and (max-width : 1250px)
+		width: calc(932px + (1121 - 932) * ((100vw - 1060px) / (1250 - 1060)))
+	@media only screen and (max-width : 1060px)
+		width: calc(602px + (931 - 602) * ((100vw - 730px) / (1060 - 730)))
+	@media only screen and (max-width : 730px)
+		width: calc(338px + (678 - 338) * ((100vw - 390px) / (730 - 390)))
+
+.container
+	width: 1520px
+	margin: 0 auto
 	@media only screen and (max-width : 1920px)
 		padding: 0 calc(10px + (0 - 10) * ((100vw - 1300px) / (1920 - 1300)))
 		width: calc(1300px + (1520 - 1300) * ((100vw - 1300px) / (1920 - 1300)))
@@ -52,7 +83,6 @@ body
 	@media only screen and (max-width : 390px)
 		padding: 0
 		width: 338px
-	margin: 0 auto
 
 .arrow, .close
 	cursor: pointer
@@ -69,6 +99,23 @@ body
 		transform: rotate(-90deg)
 	&.up
 		transform: rotate(90deg)
+
+.btn
+	@include font(16px, 400, 'SourceSansPro')
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 237px
+	padding: 8px 0 10px 0
+	@media only screen and (max-width : 1920px)
+		width: calc(186px + (237 - 186) * ((100vw - 1250px) / (1920 - 1250)))
+	@media only screen and (max-width : 1250px)
+		width: calc(218px + (265 - 218) * ((100vw - 1060px) / (1250 - 1060)))
+	@media only screen and (max-width : 1060px)
+		width: 218px
+	@media only screen and (max-width : 730px)
+		width: calc(160px + (330 - 160) * ((100vw - 390px) / (730 - 390)))
 
 @import "header"
 @import "breadcrumb"

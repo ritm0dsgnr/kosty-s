@@ -10,7 +10,7 @@ const body = document.querySelector('body'),
       tabs = document.querySelectorAll('.filter__tabs-tab'),
       filterApply = document.querySelector('.filter .filter__btns-btn.dark'),
       filterClear = document.querySelector('.filter .filter__btns-btn.white'),
-      queriesDelete = document.querySelectorAll('.catalog__queries__wrapper-item img'),
+      queriesDelete = document.querySelectorAll('.catalog__queries__wrapper-item svg'),
       catalogNav = document.querySelectorAll('.catalog__nav__wrapper-item'),
       readMore = document.querySelector('.obj__wrapper-description-text-btn'),
       readMoreBtn = document.querySelector('.obj__wrapper-description-text-btn .arrow'),
@@ -24,7 +24,16 @@ const body = document.querySelector('body'),
       cardContainer = document.querySelector('.obj__related-items'),
       cards = document.querySelectorAll('.catalog__cards-card'),
       prevButton = document.querySelector('.prev'),
-      nextButton = document.querySelector('.next')
+      nextButton = document.querySelector('.next'),
+      navItems = document.querySelectorAll('.value__wrapper-nav-items-item'),
+      contentBlocks = document.querySelectorAll('.value__wrapper-content'),
+      upArrow = document.querySelector('.value__wrapper-nav-nav .arrow.up'),
+      downArrow = document.querySelector('.value__wrapper-nav-nav .arrow.down'),
+      sliderImages = document.querySelectorAll('.about__wrapper-slider-img'),
+      leftArrow = document.querySelector('.about__wrapper-slider-nav .arrow'),
+      rightArrow = document.querySelector('.about__wrapper-slider-nav .arrow.rotate'),
+      activeIndex = document.querySelector('.about__wrapper-slider-nav .catalog__pagination-count .active'),
+      totalCount = document.querySelector('.about__wrapper-slider-nav .catalog__pagination-count .total')
 
 burger.addEventListener('click', function () {
   this.classList.toggle('active')
@@ -118,7 +127,6 @@ if (buyRequest) {
 }
 
 //gallery
-
 if (imageWrapper && window.innerWidth >= 390) {
   imageWrapper.addEventListener('mousemove', function (e) {
     const x = (e.offsetX / imageWrapper.offsetWidth) * 100
@@ -137,10 +145,10 @@ if (imageWrapper && window.innerWidth >= 390) {
   })
 }
 
-//slider
-if (cardContainer) {
-  let currentIndex = 0
+let currentIndex = 0
 
+//cards slider
+if (cardContainer) {
   prevButton.addEventListener('click', () => {
     if (currentIndex > 0) {
       currentIndex--
@@ -163,4 +171,75 @@ if (cardContainer) {
   }
 
   updateCardContainer()
+}
+
+//main value slider
+if (upArrow) {
+  function updateActiveItem(index) {
+    navItems.forEach((navItem) => {
+      navItem.classList.remove('active')
+    })
+    navItems[index].classList.add('active')
+
+
+    contentBlocks.forEach((contentBlock) => {
+      contentBlock.classList.remove('active')
+    })
+    contentBlocks[index].classList.add('active')
+  }
+
+  upArrow.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--
+      updateActiveItem(currentIndex)
+    }
+  })
+
+  downArrow.addEventListener('click', () => {
+    if (currentIndex < navItems.length - 1) {
+      currentIndex++
+      updateActiveItem(currentIndex)
+    }
+  })
+
+  navItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      currentIndex = index
+      updateActiveItem(currentIndex)
+    })
+  })
+
+  updateActiveItem(currentIndex)
+}
+
+//main slider
+if (leftArrow) {
+  function updatePaginationCount() {
+    activeIndex.textContent = currentIndex + 1
+    totalCount.textContent = sliderImages.length
+  }
+
+  function showImage(index) {
+    currentIndex = index
+    sliderImages.forEach((image, i) => {
+      if (i === index) {
+        image.classList.add('active')
+      } else {
+        image.classList.remove('active')
+      }
+    })
+    updatePaginationCount()
+  }
+
+  updatePaginationCount()
+
+  leftArrow.addEventListener('click', function() {
+    currentIndex = (currentIndex - 1 + sliderImages.length) % sliderImages.length
+    showImage(currentIndex)
+  })
+
+  rightArrow.addEventListener('click', function() {
+    currentIndex = (currentIndex + 1) % sliderImages.length
+    showImage(currentIndex)
+  })
 }

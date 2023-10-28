@@ -11,36 +11,35 @@
 	&-form
 		position: relative
 		&-lable
-			@include font(0.75rem, 300, 'SourceSansPro')
+			@include font(12px, 300, 'SourceSansPro')
 		&-title
-			@include font(1.125rem, 300, 'SourceSansPro')
-			margin-bottom: 4.2rem
+			@include font(18px, 300, 'SourceSansPro')
+			margin-bottom: 67px
 		&-input
-			@include font(.875rem, 400, 'SourceCodePro')
+			@include font(14px, 400, 'SourceCodePro')
 			width: 100%
 			resize: none
 			border: none
 			background-color: transparent
 			color: $grey
-			padding-bottom: 0.6rem
-			margin-bottom: 1.2rem
-			border-bottom: 0.0625rem $grey solid
+			padding-bottom: 9.6px
+			margin-bottom: 19px
+			border-bottom: 1px $grey solid
 		&-text
-			@include font(1rem, 300, 'SourceSansPro')
-			line-height: 1.5rem
+			@include font(16px, 300, 'SourceSansPro')
+			line-height: 24px
 			color: $grey
-			margin-bottom: 2.1rem
 		&-btn
 			cursor: pointer
-			@include font(1rem, 400, 'SourceSansPro')
-			width: 13rem
-			border: 0.0625rem $text-color solid
+			@include font(16px, 400, 'SourceSansPro')
+			width: 208px
+			border: 1px $text-color solid
 			display: flex
 			align-items: center
 			justify-content: center
-			padding: 0.5rem 0 0.62rem 0
+			padding: 8px 0 10px 0
 			margin-left: auto
-			margin-bottom: 1.25rem
+			margin-top: 36px
 
 .contact__footer
 	padding: 64px 0
@@ -104,7 +103,7 @@
 			height: 69px
 			margin-bottom: 48px
 		&-link
-			@include font(10px, 400, 'SourceSansPro')
+			@include font(12px, 400, 'SourceSansPro')
 			line-height: 24px
 			color: $gold
 		&-text
@@ -130,17 +129,37 @@
 				@include font(16px, 300, 'SourceSansPro')
 				line-height: 24px
 				color: $text-color
+				width: fit-content
+				border-bottom: 1px solid transparent
+				transition: .3s
+				&:hover
+					font-weight: 400
+					color: $gold
+					border-bottom: 1px solid $gold
+				&:active
+					color: $text-color
 				&:not(:last-child)
 					margin-bottom: 4px
 				&.grey
 					color: $grey
+					transition: .3s
+					&:hover
+						color: $gold
+					&:active
+						color: $text-color
 				&.custom
 					@include font(24px, 500, 'CormorantGaramond')
 					line-height: 36px
 					color: $gold
 					text-decoration: underline
+					border-bottom: none
+					transition: .3s
+					&:hover
+						font-size: 28px
+						font-weight: 700
+						border-bottom: none
+					&:active
+						color: $text-color
+						font-weight: 700
 					&:not(:last-child)
 						margin-bottom: 0
-
-.container-obj .main__footer
-	padding: 5.88rem 0 2rem 0

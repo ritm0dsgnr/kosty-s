@@ -23,7 +23,7 @@
 	<body>
 		<div class="page">
 			<section>
-				<div class="container">
+				<div class="container-obj">
 					<header class="header">
 						<a href="/">
 							<img class="header-logo" src="img/favicon.svg" alt="">
@@ -57,7 +57,7 @@
 			</section>
 
       <section class="breadcrumb">
-        <div class="container">
+        <div class="container-obj">
           <div class="breadcrumb__wrapper">
             <a href="/">
               <svg class="arrow" viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg>
@@ -80,7 +80,7 @@
         </div>
       </section>
       <section class="obj">
-        <div class="container container-obj">
+        <div class="container-obj">
           <div class="obj__wrapper">
             <div class="obj__wrapper-gallery">
               <div class="obj__wrapper-gallery-nav">
@@ -129,29 +129,33 @@
               </div>
             </div>
             <div class="obj__wrapper-info">
-              <p class="obj__wrapper-info-type">Lot AM-2</p>
-              <h3 class="obj__wrapper-info-name">Ammonite <br>Carcharodontosaurus tooth</h3>
-              <p class="obj__wrapper-info-title">Specifications:</p>
-              <div class="obj__wrapper-info-specifications">
-                <p class="obj__wrapper-info-specifications-type">Location:</p>
-                <p class="obj__wrapper-info-specifications-name">Hurigba Province, Morocco </p>
-                <p class="obj__wrapper-info-specifications-type">Genus:</p>
-                <p class="obj__wrapper-info-specifications-name">Prognathodon</p>
-                <p class="obj__wrapper-info-specifications-type">Size:</p>
-                <p class="obj__wrapper-info-specifications-name">65 x 30 x 15 сm  </p>
-                <p class="obj__wrapper-info-specifications-type">Age:</p>
-                <p class="obj__wrapper-info-specifications-name">66-72 million years</p>
-                <p class="obj__wrapper-info-specifications-type">Period:</p>
-                <p class="obj__wrapper-info-specifications-name">Cretaceous</p>
+              <div>
+                <p class="obj__wrapper-info-type">Lot AM-2</p>
+                <h3 class="obj__wrapper-info-name">Ammonite <br>Carcharodontosaurus tooth</h3>
               </div>
-              <p class="obj__wrapper-info-delivery">Delivery in Dubai : one week</p>
-              <div class="obj__wrapper-info-price">
-                <p class="obj__wrapper-info-price-price">10 000 $</p>
-                <div class="obj__wrapper-info-price-btn">Buy</div>
+              <div>
+                <p class="obj__wrapper-info-title">Specifications:</p>
+                <div class="obj__wrapper-info-specifications">
+                  <p class="obj__wrapper-info-specifications-type">Location:</p>
+                  <p class="obj__wrapper-info-specifications-name">Hurigba Province, Morocco </p>
+                  <p class="obj__wrapper-info-specifications-type">Genus:</p>
+                  <p class="obj__wrapper-info-specifications-name">Prognathodon</p>
+                  <p class="obj__wrapper-info-specifications-type">Size:</p>
+                  <p class="obj__wrapper-info-specifications-name">65 x 30 x 15 сm  </p>
+                  <p class="obj__wrapper-info-specifications-type">Age:</p>
+                  <p class="obj__wrapper-info-specifications-name">66-72 million years</p>
+                  <p class="obj__wrapper-info-specifications-type">Period:</p>
+                  <p class="obj__wrapper-info-specifications-name">Cretaceous</p>
+                </div>
+                <p class="obj__wrapper-info-delivery">Delivery in Dubai : one week</p>
+                <div class="obj__wrapper-info-price">
+                  <p class="obj__wrapper-info-price-price">10 000 $</p>
+                  <div class="obj__wrapper-info-price-btn btn">Buy</div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="obj__wrapper description">
+          <div class="obj__wrapper">
             <div class="obj__wrapper-description">
               <div class="obj__wrapper-description-logo">
                 <img src="img/favicon.svg" alt="">
@@ -167,7 +171,7 @@
                 </div>
               </div>
             </div>
-            <div class="obj__wrapper-info contact">
+            <div class="obj__wrapper-info">
               <div>
                 <p class="obj__wrapper-info-contact-title">Brought to you by</p>
                 <div class="contact__footer-item">
@@ -189,7 +193,7 @@
               </div>
               <div class="obj__wrapper-info-request">
                 <p class="obj__wrapper-info-request-text">Need more details?</p>
-                <div class="obj__wrapper-info-request-btn">Send request</div>
+                <div class="obj__wrapper-info-request-btn btn">Send request</div>
               </div>
             </div>
           </div>
@@ -326,7 +330,7 @@
         <div class="order">
         <div class="order__popup">
           <div class="filter__close">
-            <img src="img/close-icon.svg" alt="">
+            <svg class="close" viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#close"></use></svg>
           </div>
           <div class="order__popup-item">
             <div class="order__popup-item-ph">
@@ -339,8 +343,8 @@
           </div>
           <p class="order__popup-text">Item has been added to your Cart</p>
           <div class="filter__btns">
-            <div class="filter__btns-btn white">Go to Cart</div>
-            <div class="filter__btns-btn dark">Continue shopping</div>
+            <div class="filter__btns-btn btn white">Go to Cart</div>
+            <div class="filter__btns-btn btn dark">Continue shopping</div>
           </div>
         </div>
         </div>
@@ -348,7 +352,7 @@
         <div class="filter__popup">
           <div>
             <div class="filter__close">
-              <img src="img/close-icon.svg" alt="">
+              <svg class="close" viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#close"></use></svg>
             </div>
             <p class="request__popup-title">Enquiry</p>
             <div class="order__popup-item">
@@ -366,7 +370,7 @@
               <input class="prefooter__obj-form-input" type="email" name="email" placeholder="E-mail or phone" required>
               <label class="prefooter__obj-form-lable" for="message">Message</label>
               <textarea class="prefooter__obj-form-input" id="message" name="message" placeholder="I am interested in the following item and would like to know its asking price and current availability." required></textarea>
-              <div class="request__popup-btn" type="submit" value="Send">Send</div>
+              <div class="request__popup-btn btn" type="submit" value="Send">Send</div>
             </form>
             <p class="request__popup-text">We will never pass your personal information to anyone outside of Artefactum Gallery for their own marketing purposes without your consent. For more information about how we processes your data, please click here to read our Privacy Notice.</p>
           </div>
@@ -399,7 +403,7 @@
 		</div>
 		<footer class="footer">
 			<div class="prefooter__obj">
-				<div class="container container-obj">
+				<div class="container-obj">
 				<div class="contact__footer">
 					<div class="contact__footer-item">
 						<h3 class="contact__footer-item-title">Get in touch</h3>
@@ -418,7 +422,7 @@
 				</div>
 				</div>
 			</div>
-			<div class="container container-obj">
+			<div class="container-obj">
 				<div class="main__footer">
 					<div class="main__footer-item">
 						<img class="main__footer-item-logo" src="img/footer-logo.svg" alt="">
@@ -438,8 +442,9 @@
 								<a href="#" class="main__footer-item-wrapper-link grey">Terms of Use</a>
 							</div>
 							<div>
-								<a href="#" class="main__footer-item-wrapper-link custom">Facebook</a>
+								<a href="#" class="main__footer-item-wrapper-link custom">YouTube</a>
 								<a href="#" class="main__footer-item-wrapper-link custom">Instagram</a>
+								<a href="#" class="main__footer-item-wrapper-link custom">TikTok</a>
 							</div>
 						</div>
 						<p class="main__footer-item-text mobile">All rights reserved ® | 2023</p>
