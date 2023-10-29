@@ -108,6 +108,15 @@ body
 	justify-content: center
 	width: 237px
 	padding: 8px 0 10px 0
+	transition: .3s
+	&.gold
+		background-color: $gold
+		&:hover
+			background-color: $gold-dark
+	&.border
+		border: 1px $text-color solid
+		&:hover
+			background-color: $backround-light
 	@media only screen and (max-width : 1920px)
 		width: calc(186px + (237 - 186) * ((100vw - 1250px) / (1920 - 1250)))
 	@media only screen and (max-width : 1250px)
@@ -123,6 +132,8 @@ body
 @import "main"	
 @import "catalog"
 @import "object"
+@import "bag"
+@import "contact"
 
 @import "footer"
 @import "media"

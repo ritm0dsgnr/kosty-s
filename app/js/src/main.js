@@ -33,7 +33,9 @@ const body = document.querySelector('body'),
       leftArrow = document.querySelector('.about__wrapper-slider-nav .arrow'),
       rightArrow = document.querySelector('.about__wrapper-slider-nav .arrow.rotate'),
       activeIndex = document.querySelector('.about__wrapper-slider-nav .catalog__pagination-count .active'),
-      totalCount = document.querySelector('.about__wrapper-slider-nav .catalog__pagination-count .total')
+      totalCount = document.querySelector('.about__wrapper-slider-nav .catalog__pagination-count .total'),
+      deliveryCheckbox = document.querySelectorAll('.bag__wrapper-col-delivery-checkbox-item')
+
 
 burger.addEventListener('click', function () {
   this.classList.toggle('active')
@@ -241,5 +243,13 @@ if (leftArrow) {
   rightArrow.addEventListener('click', function() {
     currentIndex = (currentIndex + 1) % sliderImages.length
     showImage(currentIndex)
+  })
+}
+
+if (deliveryCheckbox) {
+  deliveryCheckbox.forEach(el => {
+    el.addEventListener('click', function () {
+      this.classList.toggle('active')
+    })
   })
 }

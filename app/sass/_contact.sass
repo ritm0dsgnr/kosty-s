@@ -1,0 +1,40 @@
+.contact
+  margin: 0
+  &-title
+    @include font(28px, 600, 'CormorantGaramond')
+    padding: 24px 0 32px
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 0 20px
+    margin-bottom: 100px
+    &-item
+      border-top: 1px $dark-grey solid
+      display: flex
+      flex-direction: column
+      &-title
+        @include font(20px, 500, 'CormorantGaramond')
+        padding: 13px 0
+      &-link, &-text
+        @include font(20px, 300, 'SourceSansPro')
+        line-height: 32px
+        color: $text-color
+  &__info
+    display: flex
+    justify-content: space-between
+    &-form
+      max-width: 622px
+      width: 100%
+      margin-right: 20px
+      &-title
+        @include font(44px, 600, 'CormorantGaramond')
+        margin-bottom: 64px
+    &-map
+      width: 750px
+      height: 498px
+      overflow: hidden
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center

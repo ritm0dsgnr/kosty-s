@@ -1,0 +1,160 @@
+.white
+  background-color: $text-color
+  & .breadcrumb__wrapper-list-item a
+    color: $dark-grey
+  & .breadcrumb__wrapper-list-item.active a
+    color: $backround
+  & .arrow, & .close
+    stroke: $backround
+  & p, & span
+    color: $backround
+
+.bag
+  margin-top: 100px
+  &.emrty .btn
+    margin-top: 40px
+    border: 1px $dark-grey solid
+    color: $backround
+  &__wrapper
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &-col
+      max-width: 622px
+      width: 100%
+      &:first-child
+        margin-right: 20px
+      &-title
+        @include font(28px, 600, 'CormorantGaramond')
+        margin-bottom: 32px
+      &-text
+        @include font(16px, 300, 'SourceSansPro')
+        line-height: 24px
+        margin-bottom: 16px
+      &-item
+        position: relative
+        display: flex
+        border-top: 1px $dark-grey solid
+        border-bottom: 1px $dark-grey solid
+        &-img
+          min-width: 160px
+          height: 160px
+          img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &-info
+          padding: 30px 0 30px 16px
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          &-type
+            @include font(20px, 500, 'CormorantGaramond')
+          &-name
+            @include font(28px, 500, 'CormorantGaramond')
+          &-pice
+            @include font(16px, 400, 'SourceSansPro')
+        & .close
+          position: absolute
+          top: 0
+          right: 0
+          width: 40px
+          height: 40px
+      &-delivery
+        margin-top: 108px
+        &-title
+          @include font(28px, 600, 'CormorantGaramond')
+          margin-bottom: 32px
+        &-checkbox
+          margin-bottom: 16px
+          &-item
+            cursor: pointer
+            position: relative
+            @include font(16px, 400, 'SourceSansPro')
+            padding-left: 40px
+            padding: 10px 0 10px 40px
+            &.active::after
+              content: ""
+              position: absolute
+              top: 16px
+              left: 5px
+              background-image: url(../img/done-icon.svg)
+              background-repeat: no-repeat
+              background-size: cover
+              width: 14px
+              height: 10px
+              display: block
+            &::before
+              content: ''
+              position: absolute
+              left: 0
+              width: 24px
+              height: 24px
+              display: block
+              border: 1px $dark-grey solid
+          &-description
+            @include font(16px, 300, 'SourceSansPro')
+            line-height: 24px
+        &-info
+          max-width: 362px
+          display: flex
+          align-items: flex-start
+          padding: 24px
+          background-color: #4BE291
+          & p
+            @include font(16px, 300, 'SourceSansPro')
+            line-height: 24px
+            color: $backround
+            margin-right: 10px
+          & svg
+            min-width: 25px
+      &-form
+        margin-top: 24px
+        &-title
+          @include font(28px, 600, 'CormorantGaramond')
+          margin-bottom: 32px
+        &-item
+          display: flex
+          flex-direction: column
+          margin-bottom: 16px
+        &-wrapper
+          display: grid
+          grid-template-columns: repeat(2, 1fr)
+          gap: 0 20px
+        & input
+          @include font(16px, 300, 'SourceSansPro')
+          line-height: 24px
+          color: $backround
+          width: 100%
+          border-bottom: 1px $dark-grey solid
+          &::placeholder
+            color: $backround
+        & label
+          @include font(10px, 400, 'SourceSansPro')
+          line-height: 24px
+          color: $backround
+          opacity: .4
+        & .bag__wrapper-col-delivery-checkbox-item
+          margin-top: 24px
+      &-price
+        width: 100%
+        border-top: 1px $dark-grey solid
+        border-bottom: 1px $dark-grey solid
+        &-info
+          margin: 16px 0
+          display: flex
+          align-items: center
+          justify-content: space-between
+          & p
+            @include font(18px, 300, 'SourceSansPro')
+            line-height: 26px
+      &-total
+        margin: 16px 0
+        display: flex
+        align-items: center
+        justify-content: space-between
+        & p
+          @include font(16px, 400, 'SourceSansPro')
+      & .btn
+        margin-top: 32px
+        width: 100%

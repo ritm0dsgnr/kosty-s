@@ -1,0 +1,120 @@
+<!--=include head.html -->
+<div class="white">
+<!--=include header.html -->
+<!--=include breadcrumb.html -->
+<section class="bag">
+  <div class="container">
+    <div class="bag__wrapper">
+      <div class="bag__wrapper-col">
+        <p class="bag__wrapper-col-title">Your bag</p>
+        <p class="bag__wrapper-col-text">TOTAL (2 item) 10 000$</p>
+        <p class="bag__wrapper-col-text">Items in your bag are not reserved — check out now to make them yours.</p>
+        <div class="bag__wrapper-col-item">
+          <div class="bag__wrapper-col-item-img">
+            <picture>
+              <source srcset="img/img-01-min.webp" type="image/webp">
+              <source srcset="img/img-01-min.avif" type="image/avif">
+              <img src="img/img-01-min.jpg" alt="">
+            </picture>
+          </div>
+          <div class="bag__wrapper-col-item-info">
+            <p class="bag__wrapper-col-item-info-type">Lot AM-2</p>
+            <p class="bag__wrapper-col-item-info-name">Ammonite</p>
+            <span class="bag__wrapper-col-item-info-pice">10 000$</span>
+          </div>
+          <svg class="close" viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#close"></use></svg>
+        </div>
+        <div class="bag__wrapper-col-delivery">
+          <p class="bag__wrapper-col-delivery-title">Delivery</p>
+          <div class="bag__wrapper-col-delivery-checkbox">
+            <p class="bag__wrapper-col-delivery-checkbox-item">Pick up from gallery</p>
+            <p class="bag__wrapper-col-delivery-checkbox-description">Our gallery located at Nassima Tower, M02, Plot 49 Sheikh Zayed Road, Trade Centre, Trade Centre District, Dubai. We contact you for arrange appointment </p>
+          </div>
+          <div class="bag__wrapper-col-delivery-checkbox">
+            <p class="bag__wrapper-col-delivery-checkbox-item">Delivery for Dubai residents</p>
+            <p class="bag__wrapper-col-delivery-checkbox-description">By courier within the city on the day of the order or the next. </p>
+          </div>
+          <div class="bag__wrapper-col-delivery-checkbox">
+            <p class="bag__wrapper-col-delivery-checkbox-item">Delivery for residents of other Emirates</p>
+            <p class="bag__wrapper-col-delivery-checkbox-description">By courier service ARAMEX, DHL or any other transport company to the recipient's address. Delivery time from 1 business day for small and standard items. For oversize items, we will confirm the exact timing and cost after placing your order.</p>
+          </div>
+          <div class="bag__wrapper-col-delivery-checkbox">
+            <p class="bag__wrapper-col-delivery-checkbox-item">Delivery to other countries</p>
+            <p class="bag__wrapper-col-delivery-checkbox-description">By courier service ARAMEX, DHL or any other transport company to the recipient's address. We will confirm the exact timing and cost after placing your order.</p>
+          </div>
+          <div class="bag__wrapper-col-delivery-info">
+            <p>Delivery to other countries goes with additional shipping costs. This additional costs  will be calculated and send you via email from our manager right after the order placement. We will confirm the exact timing and cost after placing your order.</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+              <circle cx="12.5" cy="12" r="7.5" stroke="black"/>
+              <path d="M12.1215 14.2271L11.9675 8.93514L11.9395 7.61914H13.1015L13.0735 8.93514L12.9195 14.2271H12.1215ZM12.5275 17.1671C12.2942 17.1671 12.0935 17.0878 11.9255 16.9291C11.7668 16.7611 11.6875 16.5511 11.6875 16.2991C11.6875 16.0285 11.7668 15.8138 11.9255 15.6551C12.0935 15.4871 12.2942 15.4031 12.5275 15.4031C12.7515 15.4031 12.9428 15.4871 13.1015 15.6551C13.2695 15.8138 13.3535 16.0285 13.3535 16.2991C13.3535 16.5511 13.2695 16.7611 13.1015 16.9291C12.9428 17.0878 12.7515 17.1671 12.5275 17.1671Z" fill="black"/>
+            </svg>
+          </div>
+        </div>
+        <form class="bag__wrapper-col-form" method="POST" action="#">
+          <p class="bag__wrapper-col-form-title">Shipping address</p>
+          <div class="bag__wrapper-col-form-wrapper">
+            <div class="bag__wrapper-col-form-item">
+              <input type="text" name="name" placeholder="Daria" id="name" required>
+              <label for="name">First Name *</label>
+            </div>
+            <div class="bag__wrapper-col-form-item">
+              <input type="text" name="lastName" placeholder="Pankova" id="lastName" required>
+              <label for="lastName">Last Name *</label>
+            </div>
+          </div>
+          <div class="bag__wrapper-col-form-item">
+            <input type="tel" name="phone" placeholder="Telephone number *" id="number" maxlength="21" required>
+            <label for="number">Eg. +983 123 456789</label>
+          </div>
+          <div class="bag__wrapper-col-form-item">
+            <input type="email" name="mail" placeholder="Email *" id="email" required>
+            <label for="email">Eg. name@anymail.com</label>
+          </div>
+          <div class="bag__wrapper-col-form-item">
+            <input type="street" name="street" placeholder="Street, Number *" id="street" required>
+            <label for="street">Eg. Fridrichstr. 15</label>
+          </div>
+          <div class="bag__wrapper-col-form-item">
+            <input type="apartment" name="apartment" placeholder="Apartment/Company/Receiver" id="apartment" required>
+            <label for="apartment">Eg. Fridrichstr. 15</label>
+          </div>
+          <div class="bag__wrapper-col-form-wrapper">
+            <div class="bag__wrapper-col-form-item">
+              <input type="code" name="code" placeholder="Postal Code *" id="code" required>
+              <label for="code">Eg. 09599</label>
+            </div>
+            <div class="bag__wrapper-col-form-item">
+              <input type="city" name="city" placeholder="City *" id="city" required>
+              <label for="city">Eg. Berlin</label>
+            </div>
+          </div>
+          <div class="bag__wrapper-col-form-item">
+            <input type="contrary" name="contrary" placeholder="Contrary " id="contrary" required>
+            <label for="contrary">UAE</label>
+          </div>
+          <p class="bag__wrapper-col-delivery-checkbox-item">Do you need a company invoice?</p>
+        </form>
+      </div>
+      <div class="bag__wrapper-col">
+        <p class="bag__wrapper-col-title">Order summary</p>
+        <div class="bag__wrapper-col-price">
+          <div class="bag__wrapper-col-price-info">
+            <p>1 item</p>
+            <p>10 000$</p>
+          </div>
+          <div class="bag__wrapper-col-price-info">
+            <p>Delivery</p>
+            <p>0</p>
+          </div>
+        </div>
+        <div class="bag__wrapper-col-total">
+          <p>Total</p>
+          <p>10 000$</p>
+        </div>
+        <div class="btn gold">Check out</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--=include footer-main.html -->
+</div>

@@ -22,6 +22,8 @@
     width: calc(75px + (108 - 75) * ((100vw - 1250px) / (1920 - 1250)))
   .obj__wrapper-description-text
     width: calc(456px + (624 - 456) * ((100vw - 1250px) / (1920 - 1250)))
+  .contact__info-map
+    width: calc(515px + (750 - 515) * ((100vw - 1250px) / (1920 - 1250)))
 @media only screen and (max-width : 1250px)
   .obj__wrapper-gallery-main
     width: calc(455px + (550 - 455) * ((100vw - 1060px) / (1250 - 1060)))
@@ -62,6 +64,19 @@
     width: calc(338px + (447 - 338) * ((100vw - 390px) / (500 - 390)))
     height: calc(338px + (447 - 338) * ((100vw - 390px) / (500 - 390)))
 
+@media only screen and (max-width : 1250px)
+  .contact__info
+    flex-direction: column
+    &-form
+      max-width: 100%
+    &-map
+      margin-top: 70px
+      width: 100%
+  .contact__wrapper
+    grid-template-columns: repeat(2, 1fr)
+    margin-bottom: 36px
+    &-item
+      padding-bottom: 64px
 @media only screen and (max-width : 1500px)
   .main__wrapper-col-title span
     margin-left: 194px
@@ -308,6 +323,21 @@
     margin-bottom: 64px
   .obj__wrapper-info-request
     margin-top: 118px
+  .bag
+    margin-top: 24px
+    &__wrapper
+      flex-direction: column
+      &-col
+        max-width: 100%
+        &-title
+          margin-top: 24px
+        &-delivery
+          margin-top: 24px
+  .contact__wrapper
+    grid-template-columns: repeat(1, 1fr)
+    margin-bottom: 76px
+    &-item
+      padding-bottom: 24px
 @media only screen and (max-width : 500px)
   .main__catalog-wrapper
     grid-template-columns: repeat(1, 1fr)
