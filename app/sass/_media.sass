@@ -115,9 +115,13 @@
     flex-direction: column-reverse
     justify-content: flex-end
     &-nav
+      overflow-x: auto
       display: flex
       height: auto
       margin-right: 0
+      &::-webkit-scrollbar
+        width: 0
+        height: 0
       &-ph:not(:last-child)
         margin-right: 20px
         margin-bottom: 0

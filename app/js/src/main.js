@@ -135,7 +135,9 @@ if (imageWrapper && window.innerWidth >= 390) {
     const y = (e.offsetY / imageWrapper.offsetHeight) * 100
     imageWrapper.querySelector('img').style.transformOrigin = x + '% ' + y + '%'
   })
+}
 
+if (imageWrapper) {
   galleryNavItems.forEach((e) => {
     e.addEventListener('click', () => {
       const img = e.querySelector('img')

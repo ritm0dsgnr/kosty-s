@@ -91,6 +91,7 @@ a {
 }
 
 input {
+  border-radius: 0;
   border: none;
   -webkit-appearance: none;
 }
@@ -412,7 +413,7 @@ body.lock {
           align-items: center;
 }
 .header__wrapper-shopping-icon {
-  width: 24px;
+  min-width: 24px;
   height: 24px;
   margin-right: 10px;
   stroke: #977E4B;
@@ -2120,6 +2121,78 @@ body.lock {
      object-position: center;
 }
 
+.not-found {
+  margin: 100px 0;
+}
+.not-found-title {
+  font-family: "CormorantGaramond";
+  font-size: 88px;
+  font-weight: 600;
+  line-height: 88px;
+}
+.not-found-text {
+  font-family: "SourceSansPro";
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  padding: 30px 0 38px 0;
+}
+.not-found-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "SourceSansPro";
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+}
+.not-found-link .arrow {
+  margin-left: 10px;
+}
+
+.privacy {
+  margin: 34px 0;
+}
+.privacy__wrapper {
+  max-width: 617px;
+}
+.privacy__wrapper-title {
+  font-family: "CormorantGaramond";
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 42px;
+}
+.privacy__wrapper-text {
+  font-family: "SourceSansPro";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.privacy__wrapper-subtitle {
+  font-family: "CormorantGaramond";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.privacy__wrapper ul {
+  padding-left: 20px;
+}
+.privacy__wrapper ul li {
+  list-style-type: disc;
+  color: #000000;
+}
+.privacy__wrapper ul li::marker {
+  font-size: 10px;
+}
+
+.m-b {
+  margin-bottom: 20px;
+}
+
 .footer {
   margin-top: 100px;
 }
@@ -2547,11 +2620,16 @@ body.lock {
             justify-content: flex-end;
   }
   .obj__wrapper-gallery-nav {
+    overflow-x: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: auto;
     margin-right: 0;
+  }
+  .obj__wrapper-gallery-nav::-webkit-scrollbar {
+    width: 0;
+    height: 0;
   }
   .obj__wrapper-gallery-nav-ph:not(:last-child) {
     margin-right: 20px;
