@@ -1,15 +1,16 @@
 .main
-  margin-top: 24px
+  padding-top: 24px
   & .container-main
     position: relative
   &__bg
     position: absolute
-    top: 0
+    top: 108px
     left: 0
     right: 0
     z-index: -1
     width: 100%
-    height: 100%
+    height: 1069px
+    margin: 0 auto
     img
       width: 100%
       height: 100%
@@ -31,12 +32,24 @@
           margin-left: 206px
           color: $gold
       &-text
+        position: relative
         @include font(20px, 300, 'SourceSansPro')
         line-height: 32px
-        width: 577px
-        margin-top: 185px
-        margin-left: 206px
+        width: 767px
+        padding-top: 185px
+        padding-left: 206px
         color: $gold
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          bottom: 0
+          background-image: url('../img/logo-gold.svg')
+          background-size: cover
+          background-repeat: no-repeat
+          width: 14px
+          height: 14px
+          display: block
       &-item
         width: 320px
         margin-bottom: 20px
@@ -77,15 +90,17 @@
           margin-top: 8px
           &::after
             position: absolute
-            right: 7px
+            right: 1px
             content: ''
             width: 200px
-            height: 2px
-            background-color: #fff
+            height: 1px
+            background-color: $grey
             display: block
-          & .arrow
-            width: 30px
-            height: 30px
+          & svg
+            width: 9px
+            height: auto
+            stroke: $grey
+            fill: transparent
 
 .main__catalog
   margin-top: 100px
@@ -108,6 +123,8 @@
       transition: .3s
       &:hover
         background: rgba(255, 255, 255, 0.10)
+      &:hover &-info .card-arrow
+        transform: translate(10px, -10px)
       &-ph
         position: absolute
         top: 0
@@ -132,8 +149,11 @@
           margin-left: auto
           stroke: $grey
           fill: transparent
+          transition: .3s
         &-name
           @include font(20px, 500, 'CormorantGaramond')
+          & br
+            display: block
       &-link
         cursor: pointer
         position: relative
@@ -143,20 +163,23 @@
         display: flex
         flex-direction: column
         justify-content: flex-end
-        & br
-          display: block
         &::after
           position: absolute
-          right: 7px
-          bottom: 14px
+          right: 1px
+          bottom: 7px
           content: ''
-          width: 97%
-          height: 2px
-          background-color: #fff
+          width: 100%
+          height: 1px
+          background-color: $grey
           display: block
-        & .arrow
-          width: 30px
-          height: 30px
+        & br
+          display: block
+        & svg
+          margin-top: 10px
+          width: 9px
+          height: auto
+          stroke: #A19E9E
+          fill: transparent
           margin-left: auto
 
 .value
@@ -171,6 +194,9 @@
         flex-direction: column
         justify-content: space-between
         margin-right: 11px
+        & .arrow.inactive
+          cursor: default
+          stroke: $grey
       &-items
         position: relative
         &-item
@@ -249,6 +275,14 @@
       @include font(18px, 300, 'SourceSansPro')
       line-height: 26px
       margin: 64px 0
+
+.form__done
+  display: none
+  color: #4BE291
+  & br
+    display: block
+  &.active
+    display: block
 
 
         

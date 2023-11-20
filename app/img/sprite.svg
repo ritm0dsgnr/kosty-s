@@ -20,4 +20,7 @@
     <path d="M0.984375 1L40.0008 1L40.0008 40.0164"/>
     <line x1="40.3536" y1="1.35355" x2="0.353551" y2="41.3536"/>
   </symbol>
+  <symbol id="long-arrow" viewBox="0 0 9 16">
+    <path d="M1 1L8 8L1 15"/>
+  </symbol>
 </svg>

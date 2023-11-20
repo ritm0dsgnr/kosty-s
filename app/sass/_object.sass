@@ -70,6 +70,8 @@
 				display: flex
 				align-items: center
 				justify-content: space-between
+				&-price
+					@include font(16px, 400, 'SourceSansPro')
 			&-contact-title
 				@include font(20px, 500, 'CormorantGaramond')
 				margin-bottom: 16px
@@ -121,23 +123,23 @@
 						@include font(16px, 300, 'SourceSansPro')
 						color: $grey
 						margin-right: 10px
+						transition: .3s
+						&:hover
+							color: $text-color
 	&__related
 		margin-top: 164px
 		&-title
 			@include font(28px, 600, 'CormorantGaramond')
 			padding: 23px 0 32px 0
 		&-items
-			overflow: visible
-			display: flex
-			align-items: flex-start
-			transition: transform .5s
+			position: relative
 			&::-webkit-scrollbar
 				width: 0
 				height: 0
 			& .catalog__cards-card
 				margin-right: 20px
 				margin-bottom: 0
-				min-width: 290px
+				width: 290px
 				&-img
 					height: 258px
 		&-nav
@@ -146,6 +148,7 @@
 			justify-content: flex-end
 			padding: 24px 0
 			& .arrow.rotate
+				position: relative
 				margin-left: 24px
 
 .order

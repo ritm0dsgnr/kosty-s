@@ -18,6 +18,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="#977E4B">
 		
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/swiper.min.css">
 
 	</head>
 	<body>
@@ -77,17 +78,20 @@
                 </div>
                 <p class="main__wrapper-col-item-type">Lot MOS-SK-1</p>
                 <p class="main__wrapper-col-item-name">The skull of the Mosasaur <br>Prognathodon Sp.</p>
-                <span class="main__wrapper-col-item-link">More details<svg class="arrow rotate" viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg></span>
+                <span class="main__wrapper-col-item-link">
+                  More details
+                  <svg viewBox="0 0 9 16"><use xlink:href="img/sprite.svg#long-arrow"></use></svg>
+                </span>
               </div>
             </div>
           </div>
-          <div class="main__bg">
-            <picture>
-              <source srcset="img/main-bg.webp" type="image/webp">
-              <source srcset="img/main-bg.avif" type="image/avif">
-              <img src="img/main-bg.jpg" alt="">
-            </picture>
-          </div>
+        </div>
+        <div class="main__bg">
+          <picture>
+            <source srcset="img/main-bg.webp" type="image/webp">
+            <source srcset="img/main-bg.avif" type="image/avif">
+            <img src="img/main-bg.jpg" alt="">
+          </picture>
         </div>
       </section>
       <section class="main__catalog">
@@ -123,7 +127,7 @@
             <div class="main__catalog-wrapper-item">
               <div class="main__catalog-wrapper-item-info">
                 <svg class="card-arrow" viewBox="0 0 41 42"><use xlink:href="img/sprite.svg#card-arrow"></use></svg>
-                <p class="main__catalog-wrapper-item-info-name">Skins <br>& Taxidermy</p>
+                <p class="main__catalog-wrapper-item-info-name">The Skins & Taxidermy</p>
               </div>
               <div class="main__catalog-wrapper-item-ph">
                 <picture>
@@ -136,7 +140,7 @@
             <div class="main__catalog-wrapper-item">
               <div class="main__catalog-wrapper-item-info">
                 <svg class="card-arrow" viewBox="0 0 41 42"><use xlink:href="img/sprite.svg#card-arrow"></use></svg>
-                <p class="main__catalog-wrapper-item-info-name">Jewelry</p>
+                <p class="main__catalog-wrapper-item-info-name">Bone Carving</p>
               </div>
               <div class="main__catalog-wrapper-item-ph">
                 <picture>
@@ -149,7 +153,7 @@
             <div class="main__catalog-wrapper-item">
               <div class="main__catalog-wrapper-item-info">
                 <svg class="card-arrow" viewBox="0 0 41 42"><use xlink:href="img/sprite.svg#card-arrow"></use></svg>
-                <p class="main__catalog-wrapper-item-info-name">Bone <br>Carving</p>
+                <p class="main__catalog-wrapper-item-info-name">Jewerly</p>
               </div>
               <div class="main__catalog-wrapper-item-ph">
                 <picture>
@@ -162,7 +166,7 @@
             <div class="main__catalog-wrapper-item">
               <div class="main__catalog-wrapper-item-info">
                 <svg class="card-arrow" viewBox="0 0 41 42"><use xlink:href="img/sprite.svg#card-arrow"></use></svg>
-                <p class="main__catalog-wrapper-item-info-name">Entomologia</p>
+                <p class="main__catalog-wrapper-item-info-name">Entomologia & Fauna</p>
               </div>
               <div class="main__catalog-wrapper-item-ph">
                 <picture>
@@ -175,7 +179,7 @@
             <div class="main__catalog-wrapper-item">
               <div class="main__catalog-wrapper-item-info">
                 <svg class="card-arrow" viewBox="0 0 41 42"><use xlink:href="img/sprite.svg#card-arrow"></use></svg>
-                <p class="main__catalog-wrapper-item-info-name">Fauna & <br>Underwater World</p>
+                <p class="main__catalog-wrapper-item-info-name">Artefacts</p>
               </div>
               <div class="main__catalog-wrapper-item-ph">
                 <picture>
@@ -186,7 +190,9 @@
               </div>
             </div>
             <div class="main__catalog-wrapper-item">
-              <span class="main__catalog-wrapper-item-link">Go to <br>Catologue<svg class="arrow rotate" viewBox="0 0 24 24"><use xlink:href="img/sprite.svg#arrow"></use></svg></span>
+              <span class="main__catalog-wrapper-item-link">
+                Go to <br>Catologue
+                <svg viewBox="0 0 9 16"><use xlink:href="img/sprite.svg#long-arrow"></use></svg>
               </span>
             </div>
           </div>
@@ -266,9 +272,14 @@
             <p class="main__form-wrapper-title">Book your personal <br>appointment in our gallery</p>
             <p class="main__form-wrapper-subtitle">Or just request a catalogue</p>
             <p class="main__form-wrapper-text">We will be happy to assist you in any question</p>
+            <p class="main__form-wrapper-text form__done">Thank you for your interest <br>We will be in touch shortly</p>
             <form action="#" method="post">
-              <input class="prefooter__obj-form-input" type="text" name="name" placeholder="Name" required>
-              <input class="prefooter__obj-form-input" type="email" name="email" placeholder="E-mail or phone" required>
+              <div>
+                <input class="prefooter__obj-form-input" type="text" name="name" placeholder="Name" required>
+              </div>
+              <div>
+                <input class="prefooter__obj-form-input" type="email" name="email" placeholder="E-mail or phone" required>
+              </div>
               <p class="prefooter__obj-form-text">By submitting an application, I consent to the processing of my personal data.</p>
               <div class="prefooter__obj-form-btn btn border" type="submit" value="Send">Send</div>
             </form>
@@ -307,9 +318,10 @@
 			</div>
 		</footer>
 
-<!-- libs -->
-<script src="js/main.min.js"></script>
-<script src="js/SmoothScroll.js"></script>
+	<!-- libs -->
+	<script src="js/swiper.min.js"></script>
+	<script src="js/main.min.js"></script>
+	<script src="js/SmoothScroll.js"></script>
 
-</body>
+	</body>
 </html>

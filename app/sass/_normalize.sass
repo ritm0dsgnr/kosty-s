@@ -39,16 +39,22 @@ input
 	border: none
 	-webkit-appearance: none
 
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #fff
-body input:required:valid,
-body textarea:required:valid
-	color: #fff
+textarea:focus, input:focus
+	color: inherit
 
-body .white input:focus:required:invalid,
-body .white textarea:focus:required:invalid
-	color: #000
-body .white input:required:valid,
-body .white textarea:required:valid
-	color: #000
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus
+	-webkit-box-shadow: 0 0 0px 1000px trasparent inset
+	transition: background-color 5000s ease-in-out 0s
+
+.prefooter__obj-form-input:-webkit-autofill,
+.prefooter__obj-form-input:-webkit-autofill:hover,
+.prefooter__obj-form-input:-webkit-autofill:focus
+	-webkit-text-fill-color: #A19E9E !important

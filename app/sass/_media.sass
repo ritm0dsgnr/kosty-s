@@ -1,6 +1,12 @@
 @import "vars"
 
+@media only screen and (min-width : 1920px)
+  .main__bg
+    width: 1920px
+
 @media only screen and (max-width : 1920px)
+  .main__bg
+    height: calc(600px + (1069 - 600) * ((100vw - 390px) / (1920 - 390)))
   .main__catalog-wrapper-item
     width: calc(218px + (365 - 218) * ((100vw - 1060px) / (1920 - 1060)))
     height: calc(218px + (365 - 218) * ((100vw - 1060px) / (1920 - 1060)))
@@ -24,6 +30,8 @@
     width: calc(456px + (624 - 456) * ((100vw - 1250px) / (1920 - 1250)))
   .contact__info-map
     width: calc(515px + (750 - 515) * ((100vw - 1250px) / (1920 - 1250)))
+  .bag__wrapper-col
+    max-width: calc(362px + (622 - 362) * ((100vw - 1024px) / (1920 - 1024)))
 @media only screen and (max-width : 1250px)
   .obj__wrapper-gallery-main
     width: calc(455px + (550 - 455) * ((100vw - 1060px) / (1250 - 1060)))
@@ -81,9 +89,9 @@
   .main__wrapper-col-title span
     margin-left: 194px
   .main__wrapper-col-text
-    max-width: 475px
-    margin-top: 200px
-    margin-left: 107px
+    max-width: 580px
+    padding-top: 200px
+    padding-left: 107px
   .main__wrapper-col-item
     margin-bottom: 70px
 @media only screen and (max-width : 1300px)
@@ -109,8 +117,11 @@
         bottom: 0
         margin-bottom: 0
       &-col-text
-        margin-top: 89px
-        margin-left: 0
+        max-width: 473px
+        padding-top: 89px
+        padding-left: 0
+        &::before
+          bottom: -320px
   .obj__wrapper-gallery
     flex-direction: column-reverse
     justify-content: flex-end
@@ -135,6 +146,9 @@
       position: absolute
       right: 0
       bottom: 0
+      &::before
+        top: 100px
+        left:  calc(-100px + (-430 - -100) * ((100vw - 730px) / (1060 - 730)))
     &-col-item
       margin-top: 55px
       position: relative
@@ -160,6 +174,22 @@
       &-img
         width: 100%
         height: 565px
+  .catalog__cards
+    grid-template-columns: repeat(3, 1fr)
+@media only screen and (max-width : 1024px)
+  .main__bg
+    top: 250px
+  .bag
+    margin-top: 24px
+    &__wrapper
+      flex-direction: column
+      &-col
+        max-width: 100%
+        &-title
+          margin-top: 24px
+        &-delivery
+          margin-top: 24px
+@media only screen and (max-width : 980px)
   .catalog__nav
     overflow: hidden
     padding: 15px 0
@@ -190,9 +220,9 @@
             stroke: $gold
         &-ph
           display: none
-  .catalog__cards
-    grid-template-columns: repeat(3, 1fr)
 @media only screen and (max-width : 730px)
+  .main__bg
+    top: 80px
   .main__wrapper
     padding-bottom: 0
     &-col-title
@@ -206,7 +236,9 @@
       font-size: 16px
       line-height: 24px
       max-width: 345px
-      margin-top: 168px
+      padding-top: 168px
+      &::before
+        display: none
     &-col-item
       margin-top: 62px
       width: 100%
@@ -327,16 +359,6 @@
     margin-bottom: 64px
   .obj__wrapper-info-request
     margin-top: 118px
-  .bag
-    margin-top: 24px
-    &__wrapper
-      flex-direction: column
-      &-col
-        max-width: 100%
-        &-title
-          margin-top: 24px
-        &-delivery
-          margin-top: 24px
   .contact__wrapper
     grid-template-columns: repeat(1, 1fr)
     margin-bottom: 76px
@@ -348,6 +370,10 @@
   .catalog__cards
     grid-template-columns: repeat(1, 1fr)
 @media only screen and (max-width : 390px)
+  .main__bg
+    top: 160px
+    img
+      object-position: -170px 0
   .main__form-wrapper-title
     font-size: 28px
   .filter

@@ -14,6 +14,7 @@ const body = document.querySelector('body'),
       catalogNav = document.querySelectorAll('.catalog__nav__wrapper-item'),
       readMore = document.querySelector('.obj__wrapper-description-text-btn'),
       readMoreBtn = document.querySelector('.obj__wrapper-description-text-btn .arrow'),
+      readMoreTextBtn = document.querySelector('.obj__wrapper-description-text-btn-text'),
       descriptionText = document.querySelector('.obj__wrapper-description-text-text'),
       orderClose = document.querySelector('.order .filter__close'),
       buyBtn = document.querySelector('.obj__wrapper-info-price-btn'),
@@ -34,7 +35,11 @@ const body = document.querySelector('body'),
       rightArrow = document.querySelector('.about__wrapper-slider-nav .arrow.rotate'),
       activeIndex = document.querySelector('.about__wrapper-slider-nav .catalog__pagination-count .active'),
       totalCount = document.querySelector('.about__wrapper-slider-nav .catalog__pagination-count .total'),
-      deliveryCheckbox = document.querySelectorAll('.bag__wrapper-col-delivery-checkbox-item')
+      deliveryCheckbox = document.querySelectorAll('.bag__wrapper-col-delivery-checkbox-item'),
+      catalogHeader = document.querySelector('.catalog__header'),
+      catalogNavigation = document.querySelector('.catalog__nav'),
+      catalogQueries = document.querySelector('.catalog__queries'),
+      forms = document.querySelectorAll('form')
 
 
 burger.addEventListener('click', function () {
@@ -108,9 +113,19 @@ catalogNav.forEach(el => {
 })
 
 if (readMore) {
+  let isExpanded = false
+
   readMore.addEventListener('click', function () {
     readMoreBtn.classList.toggle('up')
     descriptionText.classList.toggle('active')
+
+    isExpanded = !isExpanded
+    
+    if (isExpanded) {
+      readMoreTextBtn.textContent = 'Read less'
+    } else {
+      readMoreTextBtn.textContent = 'Read more'
+    }
   })
 }
 
@@ -152,30 +167,14 @@ if (imageWrapper) {
 let currentIndex = 0
 
 //cards slider
-if (cardContainer) {
-  prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--
-      updateCardContainer()
-    }
-  })
-
-  nextButton.addEventListener('click', () => {
-    if (currentIndex < cards.length - 1) {
-      currentIndex++
-      updateCardContainer()
-    }
-  })
-
-  function updateCardContainer () {
-    const element = cards[currentIndex]
-    const cardWidthWithMargin = element.offsetWidth + parseInt(window.getComputedStyle(element).marginLeft) + parseInt(window.getComputedStyle(element).marginRight)
-    const newPosition = -currentIndex * cardWidthWithMargin
-    cardContainer.style.transform = `translateX(${newPosition}px)`
-  }
-
-  updateCardContainer()
-}
+var mySwiper = new Swiper('.obj__related-items .swiper-container', {
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  navigation: {
+    nextEl: '.obj__related-nav .swiper-button-next',
+    prevEl: '.obj__related-nav .swiper-button-prev',
+  },
+})
 
 //main value slider
 if (upArrow) {
@@ -184,12 +183,22 @@ if (upArrow) {
       navItem.classList.remove('active')
     })
     navItems[index].classList.add('active')
-
-
+  
     contentBlocks.forEach((contentBlock) => {
       contentBlock.classList.remove('active')
     })
     contentBlocks[index].classList.add('active')
+  
+    if (index === 0) {
+      upArrow.classList.add('inactive')
+      downArrow.classList.remove('inactive')
+    } else if (index === navItems.length - 1) {
+      upArrow.classList.remove('inactive')
+      downArrow.classList.add('inactive')
+    } else {
+      upArrow.classList.remove('inactive')
+      downArrow.classList.remove('inactive')
+    }
   }
 
   upArrow.addEventListener('click', () => {
@@ -252,6 +261,66 @@ if (deliveryCheckbox) {
   deliveryCheckbox.forEach(el => {
     el.addEventListener('click', function () {
       this.classList.toggle('active')
+    })
+  })
+}
+
+//catalog nav fixed
+if (catalogHeader && window.innerWidth <= 500) {
+  function handleScroll() {
+    const headerTop = catalogHeader.getBoundingClientRect().top
+
+    if (headerTop <= 0) {
+      catalogNavigation.classList.add('fixed')
+      catalogQueries.classList.add('fixed')
+    } else {
+      catalogNavigation.classList.remove('fixed')
+      catalogQueries.classList.remove('fixed')
+    }
+  }
+  window.addEventListener('scroll', handleScroll)
+}
+
+//validation
+if (forms) {
+  forms.forEach(form => {
+
+    const btn = form.querySelector('.btn')
+  
+    btn.addEventListener('click', function (event) {
+  
+      const requiredInputs = form.querySelectorAll('[required]')
+      const message = document.querySelector('.form__done')
+      let isValid = true
+      
+      requiredInputs.forEach(input => {
+        if (input.value.trim() === '') {
+          isValid = false
+          input.classList.add('invalid')
+
+          const parentDiv = input.parentElement
+          if (parentDiv) {
+            parentDiv.classList.add('invalid-div')
+          }
+        } else {
+          input.classList.remove('invalid')
+
+          const parentDiv = input.parentElement
+          if (parentDiv) {
+            parentDiv.classList.remove('invalid-div')
+          }
+        }
+      })
+  
+      if (!isValid) {
+        event.preventDefault()
+      }
+
+      if (isValid) {
+        if (message) {
+          message.classList.add('active')
+        }
+      }
     })
   })
 }

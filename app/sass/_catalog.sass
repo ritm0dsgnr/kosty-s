@@ -9,6 +9,10 @@
     width: 100%
     border-top: 1px $dark-grey solid
     border-bottom: 1px $dark-grey solid
+    &.fixed
+      position: fixed
+      top: 0
+      background-color: $backround
     &::after
       position: absolute
       top: 50%
@@ -53,6 +57,12 @@
     display: flex
     align-items: center
     padding: 44px 0
+    &.fixed
+      position: fixed
+      top: 66px
+      width: 100%
+      background-color: $backround
+      padding: 10px
     &-filter
       cursor: pointer
       width: 24px
@@ -159,6 +169,9 @@
         font-size: 16px
       .total
         font-size: 10px
+
+.filter input:focus:required:invalid
+  color: $backround
 
 .filter
   position: fixed

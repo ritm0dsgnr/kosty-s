@@ -126,6 +126,27 @@ body
 	@media only screen and (max-width : 730px)
 		width: calc(160px + (330 - 160) * ((100vw - 390px) / (730 - 390)))
 
+.invalid::-webkit-input-placeholder
+	color: #FF3A6A !important
+
+.invalid
+	border-bottom: 1px #FF3A6A solid !important
+.invalid-div
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Ccircle cx='12' cy='12.5654' r='7.5' stroke='%23FF3A6A'/%3E%3Cpath d='M11.6235 14.7935L11.4695 9.50155L11.4415 8.18555H12.6035L12.5755 9.50155L12.4215 14.7935H11.6235ZM12.0295 17.7335C11.7961 17.7335 11.5955 17.6542 11.4275 17.4955C11.2688 17.3275 11.1895 17.1175 11.1895 16.8655C11.1895 16.5949 11.2688 16.3802 11.4275 16.2215C11.5955 16.0535 11.7961 15.9695 12.0295 15.9695C12.2535 15.9695 12.4448 16.0535 12.6035 16.2215C12.7715 16.3802 12.8555 16.5949 12.8555 16.8655C12.8555 17.1175 12.7715 17.3275 12.6035 17.4955C12.4448 17.6542 12.2535 17.7335 12.0295 17.7335Z' fill='%23FF3A6A'/%3E%3C/svg%3E")
+		background-repeat: no-repeat
+		background-size: cover
+		width: 24px
+		height: 25px
+		display: block
+
+
+
 @import "header"
 @import "breadcrumb"
 
